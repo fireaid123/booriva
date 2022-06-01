@@ -98,7 +98,7 @@ body {
    position: absolute;
    top: -2px;
    left: -1px;
-   background-image: url(/img/icons/location.svg);
+   background-image: url(img/icons/location.svg);
    background-repeat: no-repeat;
    background-size: cover;
    width: 20px;
@@ -114,7 +114,7 @@ body {
    position: absolute;
    top: -2px;
    left: 0px;
-   background-image: url(/img/icons/iphone.svg);
+   background-image: url(img/icons/iphone.svg);
    background-repeat: no-repeat;
    background-size: cover;
    width: 20px;
@@ -136,20 +136,6 @@ body {
 .actions__search._active {
    color: #FDA3C4;
 }
-
-// .search {
-//    display: none;
-//    padding: 6px;
-//    border-radius: 1px;
-//    margin-left: 3px;
-//    font-size: 12px;
-//    color: #000;
-//    font-weight: 600;
-//    background-color: rgba(226, 218, 218, 0.185);
-//    cursor: pointer;
-//    box-shadow: 1px 2px 5px 1px #fda3c4, -1px -2px 5px 0px #fda3c4, 1px 1px 2px 0px rgb(60, 11, 150) inset,
-//       -1px -1px 2px 0px rgb(60, 11, 150) inset;
-// }
 .search-svg {
    cursor: pointer;
    width: 20px;
@@ -161,7 +147,6 @@ body {
    line-height: 15px;
    margin-left: 16px;
 }
-// .search-text:disabled {}
 svg {
    display: flex;
    align-items: center;
@@ -468,8 +453,6 @@ body._lock {
       padding-left: 38px;
       margin-bottom: 10px;
    }
-   &__subtitle {
-   }
    &__price {
       font-weight: 700;
    }
@@ -520,8 +503,6 @@ body._lock {
    }
 }
 .item-shop-bag {
-   &__image {
-   }
    &__img {
       width: 100%;
       height: auto;
@@ -742,7 +723,7 @@ body._lock {
 }
 .subtitle {
    &__icon {
-      background-image: url(/img/icons/new-1.svg);
+      background-image: url(img/icons/new-1.svg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -805,13 +786,13 @@ body._lock {
    &__img {
       max-width: 100%;
       max-height: 434px;
-      transition: all 0.5s ease-out; /* Время эффекта */
+      transition: all 0.5s ease-out;
    }
    &__img:hover {
-      transform: scale(1.05); /* Увеличиваем масштаб */
+      transform: scale(1.05);
    }
    &__icon {
-      background-image: url(/img/icons/card-icon.svg);
+      background-image: url(img/icons/card-icon.svg);
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -939,10 +920,10 @@ body._lock {
    }
 }
 .new__card._active > .card__icon {
-   background-image: url(/img/icons/card-icon-active.svg);
+   background-image: url(img/icons/card-icon-active.svg);
 }
 .card__icon:hover {
-   background-image: url(/img/icons/icon-heart-hover.svg);
+   background-image: url(img/icons/icon-heart-hover.svg);
 }
 .button {
    display: flex;
@@ -983,7 +964,7 @@ path {
 }
 .baner {
    min-height: 512px;
-   background-image: url(/img/baner.jpg);
+   background-image: url(img/baner.jpg);
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
@@ -1062,7 +1043,7 @@ path {
       position: absolute;
       right: -190px;
       bottom: -126px;
-      background-image: url(/img/booriva-store__map.png);
+      background-image: url(img/booriva-store__map.png);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: top center;
@@ -1087,7 +1068,7 @@ path {
    &__heart {
       &_1 {
          position: absolute;
-         background-image: url(/img/icons/booriva-icon__heart.svg);
+         background-image: url(img/icons/booriva-icon__heart.svg);
          background-size: cover;
          background-repeat: no-repeat;
          background-position: center;
@@ -1098,7 +1079,7 @@ path {
       }
       &_2 {
          position: absolute;
-         background-image: url(/img/icons/booriva-icon__heart.svg);
+         background-image: url(img/icons/booriva-icon__heart.svg);
          background-size: cover;
          background-repeat: no-repeat;
          background-position: center;
@@ -1110,7 +1091,7 @@ path {
    }
    &__1 {
       position: absolute;
-      background-image: url(/img/icons/booriva-icon1.svg);
+      background-image: url(img/icons/booriva-icon1.svg);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -1121,7 +1102,7 @@ path {
    }
    &__2 {
       position: absolute;
-      background-image: url(/img/icons/booriva-icon2.svg);
+      background-image: url(img/icons/booriva-icon2.svg);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -1132,7 +1113,7 @@ path {
    }
    &__3 {
       position: absolute;
-      background-image: url(/img/icons/booriva-icon3.svg);
+      background-image: url(img/icons/booriva-icon3.svg);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -1143,7 +1124,7 @@ path {
    }
    &__4 {
       position: absolute;
-      background-image: url(/img/icons/booriva-icon4.svg);
+      background-image: url(img/icons/booriva-icon4.svg);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -1154,7 +1135,7 @@ path {
    }
    &__5 {
       position: absolute;
-      background-image: url(/img/icons/new-1.svg);
+      background-image: url(img/icons/new-1.svg);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -1165,7 +1146,7 @@ path {
    }
    &__6 {
       position: absolute;
-      background-image: url(/img/icons/booriva-icon1.svg);
+      background-image: url(img/icons/booriva-icon1.svg);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -1178,7 +1159,7 @@ path {
    &__7 {
       display: none;
       position: absolute;
-      background-image: url(/img/icons/booriva-icon2.svg);
+      background-image: url(img/icons/booriva-icon2.svg);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -1213,7 +1194,7 @@ path {
    &__item_1 {
       &::before {
          content: "";
-         background-image: url(/img/icons/info-icon1.svg);
+         background-image: url(img/icons/info-icon1.svg);
          background-repeat: no-repeat;
          width: 76px;
          height: 87px;
@@ -1222,7 +1203,7 @@ path {
    &__item_2 {
       &::before {
          content: "";
-         background-image: url(/img/icons/info-icon2.svg);
+         background-image: url(img/icons/info-icon2.svg);
          background-repeat: no-repeat;
          width: 71px;
          height: 86px;
@@ -1231,7 +1212,7 @@ path {
    &__item_3 {
       &::before {
          content: "";
-         background-image: url(/img/icons/info-icon3.svg);
+         background-image: url(img/icons/info-icon3.svg);
          background-repeat: no-repeat;
          width: 82px;
          height: 86px;
@@ -1291,7 +1272,7 @@ path {
    &__icon {
       &-big {
          position: absolute;
-         background-image: url(/img/icons/price-big.svg);
+         background-image: url(img/icons/price-big.svg);
          background-repeat: no-repeat;
          background-size: cover;
          width: 105px;
@@ -1317,7 +1298,7 @@ path {
       }
       &-small {
          position: absolute;
-         background-image: url(/img/icons/price-big.svg);
+         background-image: url(img/icons/price-big.svg);
          background-repeat: no-repeat;
          background-size: cover;
          width: 105px;
@@ -1388,7 +1369,6 @@ path {
       }
    }
 }
-
 .top {
    &__container {
       margin: 0 auto;
@@ -1399,8 +1379,6 @@ path {
       column-gap: 15px;
       margin-bottom: 27px;
       justify-content: center;
-   }
-   &__item {
    }
 }
 .item-top {
@@ -1444,7 +1422,7 @@ path {
    }
    &__icon {
       cursor: pointer;
-      background-image: url(/img/icons/card-icon.svg);
+      background-image: url(img/icons/card-icon.svg);
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -1464,9 +1442,9 @@ path {
    &__img {
       width: 100%;
       height: auto;
-      transition: all 0.4s ease-out; /* Время эффекта */
+      transition: all 0.4s ease-out;
       &:hover {
-         transform: scale(1.05); /* Увеличиваем масштаб */
+         transform: scale(1.05);
       }
       &_big {
          transition: all 1s ease;
@@ -1499,12 +1477,11 @@ path {
    }
 }
 .item-top__item._active .item-top__icon {
-   background-image: url(/img/icons/card-icon-active.svg);
+   background-image: url(img/icons/card-icon-active.svg);
 }
 .item-top__icon:hover {
-   background-image: url(/img/icons/icon-heart-hover.svg);
+   background-image: url(img/icons/icon-heart-hover.svg);
 }
-
 .block {
    &__text {
       display: flex;
@@ -1619,7 +1596,7 @@ path {
          margin-right: 22px;
          &::after {
             content: '';
-            background-image: url(/img/icons/arrow-right-black.svg);
+            background-image: url(img/icons/arrow-right-black.svg);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -1664,7 +1641,7 @@ path {
       text-overflow: ellipsis;
    }
    &__icon {
-      background-image: url(/img/icons/new-1.svg);
+      background-image: url(img/icons/new-1.svg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -1706,7 +1683,7 @@ path {
    }
    &__icon {
       &_1 {
-         background-image: url(/img/icons/return-icon.svg);
+         background-image: url(img/icons/return-icon.svg);
          background-repeat: no-repeat;
          background-position: top center;
          background-size: cover;
@@ -1714,7 +1691,7 @@ path {
          min-height: 134px;
       }
       &_3 {
-         background-image: url(/img/icons/return-icon-2.svg);
+         background-image: url(img/icons/return-icon-2.svg);
          background-repeat: no-repeat;
          background-position: top center;
          background-size: cover;
@@ -1722,7 +1699,7 @@ path {
          min-height: 135px;
       }
       &_2 {
-         background-image: url(/img/icons/return-icon-3.svg);
+         background-image: url(img/icons/return-icon-3.svg);
          background-repeat: no-repeat;
          background-position: top center;
          background-size: cover;
@@ -1730,7 +1707,7 @@ path {
          min-height: 130px;
       }
       &_4 {
-         background-image: url(/img/icons/return-icon-4.svg);
+         background-image: url(img/icons/return-icon-4.svg);
          background-repeat: no-repeat;
          background-position: top center;
          background-size: cover;
@@ -1773,19 +1750,19 @@ path {
       background-size: cover;
       min-height: 100px;
       &_1 {
-         background-image: url(/img/icons/delivery-1.svg);
+         background-image: url(img/icons/delivery-1.svg);
          min-width: 130px;
       }
       &_2 {
-         background-image: url(/img/icons/delivery-2.svg);
+         background-image: url(img/icons/delivery-2.svg);
          min-width: 106px;
       }
       &_3 {
-         background-image: url(/img/icons/delivery-3.svg);
+         background-image: url(img/icons/delivery-3.svg);
          min-width: 75px;
       }
       &_4 {
-         background-image: url(/img/icons/delivery-4.svg);
+         background-image: url(img/icons/delivery-4.svg);
          min-width: 67px;
       }
    }
@@ -1828,8 +1805,6 @@ path {
          }
       }
    }
-   &__item {
-   }
 }
 .item-loyalty {
    &_1 {
@@ -1847,12 +1822,12 @@ path {
       background-position: top center;
       margin-bottom: 20px;
       &_1 {
-         background-image: url(/img/icons/loyalty-icon-1.svg);
+         background-image: url(img/icons/loyalty-icon-1.svg);
          width: 273px;
          height: 270px;
       }
       &_2 {
-         background-image: url(/img/icons/loyalty-icon-2.svg);
+         background-image: url(img/icons/loyalty-icon-2.svg);
          width: 301px;
          height: 278px;
       }
@@ -1915,7 +1890,7 @@ path {
       margin-bottom: 20px;
       &::before {
          content: '';
-         background-image: url(/img/icons/contacts-icon-location.svg);
+         background-image: url(img/icons/contacts-icon-location.svg);
          background-repeat: no-repeat;
          background-position: center;
          background-size: cover;
@@ -1931,7 +1906,7 @@ path {
       margin-bottom: 20px;
       &::before {
          content: '';
-         background-image: url(/img/icons/contacts-icon-phone.svg);
+         background-image: url(img/icons/contacts-icon-phone.svg);
          background-repeat: no-repeat;
          background-position: center;
          background-size: cover;
@@ -1946,7 +1921,7 @@ path {
       position: relative;
       &::before {
          content: '';
-         background-image: url(/img/icons/contacts-icon-mail.svg);
+         background-image: url(img/icons/contacts-icon-mail.svg);
          background-repeat: no-repeat;
          background-position: center;
          background-size: cover;
@@ -2007,8 +1982,6 @@ path {
       }
       &_2 {
          margin-top: 200px;
-      }
-      &_3 {
       }
    }
    &__image {
@@ -2126,7 +2099,6 @@ path {
    }
    &__list {
       display: flex;
-      // justify-content: space-between;
       gap: 48px;
    }
    &__item {
@@ -2233,7 +2205,7 @@ path {
          content: '';
          display: block;
          position: absolute;
-         background-image: url(/img/icons/arrow-right-table.svg);
+         background-image: url(img/icons/arrow-right-table.svg);
          background-repeat: no-repeat;
          background-size: cover;
          background-position: top center;
@@ -2322,7 +2294,7 @@ path {
    right: 70px;
 }
 .page__table._lock {
-   overflow: hidden; /*Запретили взаимодействовать с контентом под попапом, крч запретили скроллить)*/
+   overflow: hidden;
 }
 .page-info {
    padding: 60px 0;
@@ -2347,7 +2319,7 @@ path {
    &__item_1 {
       &::before {
          content: "";
-         background-image: url(/img/icons/info-icon1.svg);
+         background-image: url(img/icons/info-icon1.svg);
          background-repeat: no-repeat;
          width: 78px;
          height: 89px;
@@ -2356,7 +2328,7 @@ path {
    &__item_2 {
       &::before {
          content: "";
-         background-image: url(/img/icons/info-icon2.svg);
+         background-image: url(img/icons/info-icon2.svg);
          background-repeat: no-repeat;
          width: 78px;
          height: 89px;
@@ -2365,7 +2337,7 @@ path {
    &__item_3 {
       &::before {
          content: "";
-         background-image: url(/img/icons/page-info__icon.svg);
+         background-image: url(img/icons/page-info__icon.svg);
          background-repeat: no-repeat;
          width: 79px;
          height: 81px;
@@ -2435,15 +2407,11 @@ path {
       &_left {
          transform: rotate(-180deg);
       }
-      &_right {
-      }
    }
    &__list {
       display: flex;
       align-items: center;
       gap: 13px;
-   }
-   &__item {
    }
    &__link {
       width: 34px;
@@ -2624,12 +2592,6 @@ path {
    font-style: italic;
 }
 .card {
-   &__icon {
-      &_catalog {
-      }
-   }
-   &__sale {
-   }
    &__image {
       &_catalog {
          &::after {
@@ -2648,14 +2610,6 @@ path {
                transform: scale(1.15);
             }
          }
-      }
-   }
-   &__text {
-      &_catalog {
-      }
-   }
-   &__price {
-      &_catalog {
       }
    }
 }
@@ -2692,7 +2646,7 @@ path {
          position: absolute;
          bottom: -3px;
          left: 69px;
-         background-image: url(/img/icons/checkout-svg.svg);
+         background-image: url(img/icons/checkout-svg.svg);
          background-repeat: no-repeat;
          background-size: cover;
          background-position: top center;
@@ -2759,8 +2713,6 @@ path {
             border: 1px solid #FDA3C4;
             background-color: #FDA3C4;
          }
-      }
-      &-label {
       }
       &-span {
          color: #FDA3C4;
@@ -2911,8 +2863,6 @@ button {
    padding-top: 24px;
 }
 .sum-shop-bag {
-   &__text {
-   }
    &__price {
       font-weight: 700;
    }
@@ -2929,14 +2879,14 @@ button {
    align-items: center;
 }
 .title-block__subtitle-icon {
-   background-image: url(/img/icons/checkout-shop-svg.svg);
+   background-image: url(img/icons/checkout-shop-svg.svg);
    background-position: top center;
    background-repeat: no-repeat;
    background-size: cover;
    width: 24px;
    height: 24px;
    &._active {
-      background-image: url(/img/icons/checkout-shop-svg-active.svg);
+      background-image: url(img/icons/checkout-shop-svg-active.svg);
    }
 }
 .wish {
@@ -3057,10 +3007,6 @@ body.inactive {
    color: #fff;
    font-size: 35px;
 }
-
-
-
-
 .swiper-button-prev,
 .swiper-button-next {
    transition: opacity 0.3s ease 0s;
@@ -3070,13 +3016,10 @@ body.inactive {
    opacity: 0;
    overflow: hidden;
 }
-
-
 .wrapper {
    padding: 30px;
    min-height: 100%;
 }
-
 .title {
    font-size: 30px;
    font-weight: 700;
@@ -3095,13 +3038,10 @@ body.inactive {
 // .swiper-vertical > .swiper-pagination-bullets {
 // }
 // .image-slider__wrapper {
-
 // }
-
 // .image-slider__slide {
    
 // }
-
 // .image-slider__image {
 // }
 .images-mini-slider__wrapper.swiper-wrapper {
@@ -3118,7 +3058,6 @@ body.inactive {
    max-width: 100%;
    height: auto;
 }
-
 // Стрелки 
 // .image-slider .swiper-button-prev::after,
 // .image-slider .swiper-button-next::after {
@@ -3131,9 +3070,7 @@ body.inactive {
    left: 0;
    width: 12px;
 }
-
 // .swiper-pagination-bullets-dynamic, .swiper-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic
-
 // Буллеты
 .images-mini-slider .swiper-pagination-bullet {
    width: 12px;
@@ -3151,21 +3088,17 @@ body.inactive {
 //    font-size: 20px;
 //    color: #000;
 // }
-
 // .image-slider .swiper-pagination-progressbar-fill {
 //    background-color: #000;
 // }
-
 // .image-slider .swiper-scrollbar-drag {
 //    cursor: pointer;
 //    background-color: #000;
 // }
-
 // Автоширина слайда
 // .image-slider .swiper-slide {
 //    width: auto;
 // }
-
 // // Мультирядность
 // .image-slider {
 //    height: 800px;
@@ -3174,7 +3107,6 @@ body.inactive {
 //    height: calc((100% - 30px) / 2);
 //    overflow: hidden;
 // }
-
 // Миниатюры (превью)
 // .image-mini-slider {}
 // .image-mini-slider__wrapper {}
@@ -3182,27 +3114,16 @@ body.inactive {
    opacity: 0.2;
    transition: opacity 0.3s ease 0s;
 }
-
 .images-mini-slider__slide.swiper-slide-thumb-active {
    opacity: 1;
 }
-
 .images-mini-slider__image {
-
    cursor: pointer;
 }
-
 .images-mini-slider__image img {
    width: 100%;
    height: 100%;
 }
-
-
-
-
-
-
-
 
 @media (max-width: 1001px) {
    .header__top {
@@ -3905,7 +3826,7 @@ body.inactive {
       padding: 0;
    }
    .header__menu {
-      position: fixed; /*фиксированный*/
+      position: fixed;
       z-index: 1;
       top: 0;
       left: 100%;
@@ -3914,7 +3835,7 @@ body.inactive {
       background-color: rgba(253, 163, 196, 1);
       padding: 98px 30px 50px;
       transition: left 0.5s ease 0s;
-      overflow: auto; /*скролить если не поместился какойто контент*/
+      overflow: auto;
    }
    .header__menu._active {
       left: 0;
@@ -4221,8 +4142,6 @@ body.inactive {
       &__img {
          width: 100%;
          height: auto;
-         &_big {
-         }
       }
       &__content {
          max-width: 143px;
@@ -4461,7 +4380,7 @@ body.inactive {
       }
       &__icon {
          &_1 {
-            background-image: url(/img/icons/return-icon.svg);
+            background-image: url(img/icons/return-icon.svg);
             background-repeat: no-repeat;
             background-position: top center;
             background-size: cover;
@@ -4469,7 +4388,7 @@ body.inactive {
             min-height: 134px;
          }
          &_3 {
-            background-image: url(/img/icons/return-icon-2.svg);
+            background-image: url(img/icons/return-icon-2.svg);
             background-repeat: no-repeat;
             background-position: top center;
             background-size: cover;
@@ -4477,7 +4396,7 @@ body.inactive {
             min-height: 135px;
          }
          &_2 {
-            background-image: url(/img/icons/return-icon-3.svg);
+            background-image: url(img/icons/return-icon-3.svg);
             background-repeat: no-repeat;
             background-position: top center;
             background-size: cover;
@@ -4485,7 +4404,7 @@ body.inactive {
             min-height: 130px;
          }
          &_4 {
-            background-image: url(/img/icons/return-icon-4.svg);
+            background-image: url(img/icons/return-icon-4.svg);
             background-repeat: no-repeat;
             background-position: top center;
             background-size: cover;
@@ -4571,12 +4490,12 @@ body.inactive {
       &__icon {
          margin-bottom: 20px;
          &_1 {
-            background-image: url(/img/icons/loyalty-icon-1.svg);
+            background-image: url(img/icons/loyalty-icon-1.svg);
             width: 232px;
             height: 229px;
          }
          &_2 {
-            background-image: url(/img/icons/loyalty-icon-2.svg);
+            background-image: url(img/icons/loyalty-icon-2.svg);
             width: 256px;
             height: 236px;
             margin-bottom: 13px;
@@ -4881,7 +4800,7 @@ body.inactive {
    .icon-logo {
       display: flex;
       align-items: flex-end;
-      background-image: url(/img/icons/menu__logo.svg);
+      background-image: url(img/icons/menu__logo.svg);
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -4926,7 +4845,7 @@ body.inactive {
       background-color: #fda3c4;
    }
    .menu__logo._active .icon-logo {
-      background-image: url(/img/icons/logo2.svg);
+      background-image: url(img/icons/logo2.svg);
    }
    .menu__logo._active .icon-logo::after {
       background-color: #fda3c4;
@@ -4983,7 +4902,7 @@ body.inactive {
       color: #fda3c4;
       font-style: italic;
       .icon-message {
-         background-image: url(/img/icons/icon_send-message2.svg);
+         background-image: url(img/icons/icon_send-message2.svg);
       }
    }
    .menu__filter {
@@ -5002,7 +4921,7 @@ body.inactive {
          }
       }
       .icon-filter {
-         background-image: url(/img/icons/catalog-filter.svg);
+         background-image: url(img/icons/catalog-filter.svg);
       }
    }
    .filter-menu {
@@ -5022,7 +4941,7 @@ body.inactive {
    }
    .icon-filter {
       display: block;
-      background-image: url(/img/icons/catalog-filer-white.svg);
+      background-image: url(img/icons/catalog-filer-white.svg);
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -5032,7 +4951,7 @@ body.inactive {
    }
    .icon-message {
       display: block;
-      background-image: url(/img/icons/icon_send-message.svg);
+      background-image: url(img/icons/icon_send-message.svg);
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -5044,12 +4963,12 @@ body.inactive {
       font-style: italic;
       color: #fda3c4;
       .icon-bag {
-         background-image: url(/img/icons/shopping-bag2.svg);
+         background-image: url(img/icons/shopping-bag2.svg);
       }
    }
    .icon-bag {
       display: block;
-      background-image: url(/img/icons/shopping-bag.svg);
+      background-image: url(img/icons/shopping-bag.svg);
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -5061,12 +4980,12 @@ body.inactive {
       font-style: italic;
       color: #fda3c4;
       .icon-wishlist {
-         background-image: url(/img/icons/favorite2.svg);
+         background-image: url(img/icons/favorite2.svg);
       }
    }
    .icon-wishlist {
       display: block;
-      background-image: url(/img/icons/favorite.svg);
+      background-image: url(img/icons/favorite.svg);
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -6558,7 +6477,6 @@ body.inactive {
             top: 0;
             right: 0;
             width: 100%;
-            // height: ;
             max-height: 100%;
             background-color: #fda3c4;
             z-index: -1;
