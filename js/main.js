@@ -86,12 +86,7 @@ const itemCatalogSubtitles = document.querySelectorAll('.item-catalog__subtitle'
 const productsContainer = document.querySelector('.products__container');
 const titleBlockSubtitleIcon = document.querySelector('.title-block__subtitle-icon');
    if (window.matchMedia("(max-width: 769px)").matches) {
-      // ... ваша логика
-      // которая не станет выполняться
-      // если размер больше 540px
       if (linkMenus.length > 0) {
-         // Далее если мы прошли проверку и такие стрелочки у нас есть, мы запускаем цикл чтобы по всем им пробежаться
-         // создаем константу с каждой из этих стрелочек в данной ситуации одна
          for (let index = 0; index < linkMenus.length; index++) {
             // const cardIcona = cardIcons[index];
             let linkMenu = linkMenus[index];
