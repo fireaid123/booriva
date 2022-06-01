@@ -473,7 +473,7 @@ body {
   position: absolute;
   top: -2px;
   left: -1px;
-  background-image: url(img/icons/location.svg);
+  background-image: url(../img/icons/location.svg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 20px;
@@ -491,7 +491,7 @@ body {
   position: absolute;
   top: -2px;
   left: 0px;
-  background-image: url(img/icons/iphone.svg);
+  background-image: url(../img/icons/iphone.svg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 20px;
@@ -1372,7 +1372,7 @@ body._lock {
 }
 
 .subtitle__icon {
-  background-image: url(img/icons/new-1.svg);
+  background-image: url(../img/icons/new-1.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1461,7 +1461,7 @@ body._lock {
 }
 
 .card__icon {
-  background-image: url(img/icons/card-icon.svg);
+  background-image: url(../img/icons/card-icon.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1681,11 +1681,11 @@ body._lock {
 }
 
 .new__card._active > .card__icon {
-  background-image: url(img/icons/card-icon-active.svg);
+  background-image: url(../img/icons/card-icon-active.svg);
 }
 
 .card__icon:hover {
-  background-image: url(img/icons/icon-heart-hover.svg);
+  background-image: url(../img/icons/icon-heart-hover.svg);
 }
 
 .button {
@@ -1743,7 +1743,7 @@ path {
 
 .baner {
   min-height: 512px;
-  background-image: url(img/baner.jpg);
+  background-image: url(../img/baner.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1855,7 +1855,7 @@ path {
   position: absolute;
   right: -190px;
   bottom: -126px;
-  background-image: url(img/booriva-store__map.png);
+  background-image: url(../img/booriva-store__map.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
@@ -1882,7 +1882,7 @@ path {
 
 .content-icon__heart_1 {
   position: absolute;
-  background-image: url(img/icons/booriva-icon__heart.svg);
+  background-image: url(../img/icons/booriva-icon__heart.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1894,7 +1894,7 @@ path {
 
 .content-icon__heart_2 {
   position: absolute;
-  background-image: url(img/icons/booriva-icon__heart.svg);
+  background-image: url(../img/icons/booriva-icon__heart.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1906,7 +1906,7 @@ path {
 
 .content-icon__1 {
   position: absolute;
-  background-image: url(img/icons/booriva-icon1.svg);
+  background-image: url(../img/icons/booriva-icon1.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1918,7 +1918,7 @@ path {
 
 .content-icon__2 {
   position: absolute;
-  background-image: url(img/icons/booriva-icon2.svg);
+  background-image: url(../img/icons/booriva-icon2.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1930,7 +1930,7 @@ path {
 
 .content-icon__3 {
   position: absolute;
-  background-image: url(img/icons/booriva-icon3.svg);
+  background-image: url(../img/icons/booriva-icon3.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1942,7 +1942,7 @@ path {
 
 .content-icon__4 {
   position: absolute;
-  background-image: url(img/icons/booriva-icon4.svg);
+  background-image: url(../img/icons/booriva-icon4.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1954,7 +1954,7 @@ path {
 
 .content-icon__5 {
   position: absolute;
-  background-image: url(img/icons/new-1.svg);
+  background-image: url(../img/icons/new-1.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1966,7 +1966,7 @@ path {
 
 .content-icon__6 {
   position: absolute;
-  background-image: url(img/icons/booriva-icon1.svg);
+  background-image: url(../img/icons/booriva-icon1.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1981,7 +1981,7 @@ path {
 .content-icon__7 {
   display: none;
   position: absolute;
-  background-image: url(img/icons/booriva-icon2.svg);
+  background-image: url(../img/icons/booriva-icon2.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -2029,7 +2029,7 @@ path {
 
 .info__item_1::before {
   content: "";
-  background-image: url(img/icons/info-icon1.svg);
+  background-image: url(../img/icons/info-icon1.svg);
   background-repeat: no-repeat;
   width: 76px;
   height: 87px;
@@ -2037,7 +2037,7 @@ path {
 
 .info__item_2::before {
   content: "";
-  background-image: url(img/icons/info-icon2.svg);
+  background-image: url(../img/icons/info-icon2.svg);
   background-repeat: no-repeat;
   width: 71px;
   height: 86px;
@@ -2045,7 +2045,7 @@ path {
 
 .info__item_3::before {
   content: "";
-  background-image: url(img/icons/info-icon3.svg);
+  background-image: url(../img/icons/info-icon3.svg);
   background-repeat: no-repeat;
   width: 82px;
   height: 86px;
@@ -2123,7 +2123,7 @@ path {
 
 .suits__icon-big {
   position: absolute;
-  background-image: url(img/icons/price-big.svg);
+  background-image: url(../img/icons/price-big.svg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 105px;
@@ -2154,7 +2154,7 @@ path {
 
 .suits__icon-small {
   position: absolute;
-  background-image: url(img/icons/price-big.svg);
+  background-image: url(../img/icons/price-big.svg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 105px;
@@ -2314,7 +2314,7 @@ path {
 
 .item-top__icon {
   cursor: pointer;
-  background-image: url(img/icons/card-icon.svg);
+  background-image: url(../img/icons/card-icon.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -2393,11 +2393,11 @@ path {
 }
 
 .item-top__item._active .item-top__icon {
-  background-image: url(img/icons/card-icon-active.svg);
+  background-image: url(../img/icons/card-icon-active.svg);
 }
 
 .item-top__icon:hover {
-  background-image: url(img/icons/icon-heart-hover.svg);
+  background-image: url(../img/icons/icon-heart-hover.svg);
 }
 
 .block__text {
@@ -2577,7 +2577,7 @@ path {
 
 .breadcrumbs__link:not(:last-child)::after {
   content: '';
-  background-image: url(img/icons/arrow-right-black.svg);
+  background-image: url(../img/icons/arrow-right-black.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -2630,7 +2630,7 @@ path {
 }
 
 .title-block__icon {
-  background-image: url(img/icons/new-1.svg);
+  background-image: url(../img/icons/new-1.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -2698,7 +2698,7 @@ path {
 }
 
 .exchange__icon_1 {
-  background-image: url(img/icons/return-icon.svg);
+  background-image: url(../img/icons/return-icon.svg);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -2707,7 +2707,7 @@ path {
 }
 
 .exchange__icon_3 {
-  background-image: url(img/icons/return-icon-2.svg);
+  background-image: url(../img/icons/return-icon-2.svg);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -2716,7 +2716,7 @@ path {
 }
 
 .exchange__icon_2 {
-  background-image: url(img/icons/return-icon-3.svg);
+  background-image: url(../img/icons/return-icon-3.svg);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -2725,7 +2725,7 @@ path {
 }
 
 .exchange__icon_4 {
-  background-image: url(img/icons/return-icon-4.svg);
+  background-image: url(../img/icons/return-icon-4.svg);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -2795,22 +2795,22 @@ path {
 }
 
 .delivery__icon_1 {
-  background-image: url(img/icons/delivery-1.svg);
+  background-image: url(../img/icons/delivery-1.svg);
   min-width: 130px;
 }
 
 .delivery__icon_2 {
-  background-image: url(img/icons/delivery-2.svg);
+  background-image: url(../img/icons/delivery-2.svg);
   min-width: 106px;
 }
 
 .delivery__icon_3 {
-  background-image: url(img/icons/delivery-3.svg);
+  background-image: url(../img/icons/delivery-3.svg);
   min-width: 75px;
 }
 
 .delivery__icon_4 {
-  background-image: url(img/icons/delivery-4.svg);
+  background-image: url(../img/icons/delivery-4.svg);
   min-width: 67px;
 }
 
@@ -2909,13 +2909,13 @@ path {
 }
 
 .item-loyalty__icon_1 {
-  background-image: url(img/icons/loyalty-icon-1.svg);
+  background-image: url(../img/icons/loyalty-icon-1.svg);
   width: 273px;
   height: 270px;
 }
 
 .item-loyalty__icon_2 {
-  background-image: url(img/icons/loyalty-icon-2.svg);
+  background-image: url(../img/icons/loyalty-icon-2.svg);
   width: 301px;
   height: 278px;
 }
@@ -3004,7 +3004,7 @@ path {
 
 .contacts-block__location::before {
   content: '';
-  background-image: url(img/icons/contacts-icon-location.svg);
+  background-image: url(../img/icons/contacts-icon-location.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -3022,7 +3022,7 @@ path {
 
 .contacts-block__phone::before {
   content: '';
-  background-image: url(img/icons/contacts-icon-phone.svg);
+  background-image: url(../img/icons/contacts-icon-phone.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -3039,7 +3039,7 @@ path {
 
 .contacts-block__mail::before {
   content: '';
-  background-image: url(img/icons/contacts-icon-mail.svg);
+  background-image: url(../img/icons/contacts-icon-mail.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -3418,7 +3418,7 @@ path {
   content: '';
   display: block;
   position: absolute;
-  background-image: url(img/icons/arrow-right-table.svg);
+  background-image: url(../img/icons/arrow-right-table.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
@@ -3569,7 +3569,7 @@ path {
 
 .page-info__item_1::before {
   content: "";
-  background-image: url(img/icons/info-icon1.svg);
+  background-image: url(../img/icons/info-icon1.svg);
   background-repeat: no-repeat;
   width: 78px;
   height: 89px;
@@ -3577,7 +3577,7 @@ path {
 
 .page-info__item_2::before {
   content: "";
-  background-image: url(img/icons/info-icon2.svg);
+  background-image: url(../img/icons/info-icon2.svg);
   background-repeat: no-repeat;
   width: 78px;
   height: 89px;
@@ -3585,7 +3585,7 @@ path {
 
 .page-info__item_3::before {
   content: "";
-  background-image: url(img/icons/page-info__icon.svg);
+  background-image: url(../img/icons/page-info__icon.svg);
   background-repeat: no-repeat;
   width: 79px;
   height: 81px;
@@ -4018,7 +4018,7 @@ path {
   position: absolute;
   bottom: -3px;
   left: 69px;
-  background-image: url(img/icons/checkout-svg.svg);
+  background-image: url(../img/icons/checkout-svg.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
@@ -4378,7 +4378,7 @@ button {
 }
 
 .title-block__subtitle-icon {
-  background-image: url(img/icons/checkout-shop-svg.svg);
+  background-image: url(../img/icons/checkout-shop-svg.svg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4387,7 +4387,7 @@ button {
 }
 
 .title-block__subtitle-icon._active {
-  background-image: url(img/icons/checkout-shop-svg-active.svg);
+  background-image: url(../img/icons/checkout-shop-svg-active.svg);
 }
 
 .wish {
@@ -5917,7 +5917,7 @@ body.inactive .wish-block {
     gap: 56px;
   }
   .exchange__icon_1 {
-    background-image: url(img/icons/return-icon.svg);
+    background-image: url(../img/icons/return-icon.svg);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
@@ -5925,7 +5925,7 @@ body.inactive .wish-block {
     min-height: 134px;
   }
   .exchange__icon_3 {
-    background-image: url(img/icons/return-icon-2.svg);
+    background-image: url(../img/icons/return-icon-2.svg);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
@@ -5933,7 +5933,7 @@ body.inactive .wish-block {
     min-height: 135px;
   }
   .exchange__icon_2 {
-    background-image: url(img/icons/return-icon-3.svg);
+    background-image: url(../img/icons/return-icon-3.svg);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
@@ -5941,7 +5941,7 @@ body.inactive .wish-block {
     min-height: 130px;
   }
   .exchange__icon_4 {
-    background-image: url(img/icons/return-icon-4.svg);
+    background-image: url(../img/icons/return-icon-4.svg);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
@@ -6046,12 +6046,12 @@ body.inactive .wish-block {
     margin-bottom: 20px;
   }
   .item-loyalty__icon_1 {
-    background-image: url(img/icons/loyalty-icon-1.svg);
+    background-image: url(../img/icons/loyalty-icon-1.svg);
     width: 232px;
     height: 229px;
   }
   .item-loyalty__icon_2 {
-    background-image: url(img/icons/loyalty-icon-2.svg);
+    background-image: url(../img/icons/loyalty-icon-2.svg);
     width: 256px;
     height: 236px;
     margin-bottom: 13px;
@@ -6363,7 +6363,7 @@ body.inactive .wish-block {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    background-image: url(img/icons/menu__logo.svg);
+    background-image: url(../img/icons/menu__logo.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -6409,7 +6409,7 @@ body.inactive .wish-block {
     background-color: #fda3c4;
   }
   .menu__logo._active .icon-logo {
-    background-image: url(img/icons/logo2.svg);
+    background-image: url(../img/icons/logo2.svg);
   }
   .menu__logo._active .icon-logo::after {
     background-color: #fda3c4;
@@ -6472,7 +6472,7 @@ body.inactive .wish-block {
     font-style: italic;
   }
   .menu__message._active .icon-message {
-    background-image: url(img/icons/icon_send-message2.svg);
+    background-image: url(../img/icons/icon_send-message2.svg);
   }
   .menu__filter {
     display: -webkit-box;
@@ -6493,7 +6493,7 @@ body.inactive .wish-block {
     color: #1f1f11;
   }
   .menu__filter._active .icon-filter {
-    background-image: url(img/icons/catalog-filter.svg);
+    background-image: url(../img/icons/catalog-filter.svg);
   }
   .filter-menu {
     background-color: #F40000;
@@ -6524,7 +6524,7 @@ body.inactive .wish-block {
   }
   .icon-filter {
     display: block;
-    background-image: url(img/icons/catalog-filer-white.svg);
+    background-image: url(../img/icons/catalog-filer-white.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -6534,7 +6534,7 @@ body.inactive .wish-block {
   }
   .icon-message {
     display: block;
-    background-image: url(img/icons/icon_send-message.svg);
+    background-image: url(../img/icons/icon_send-message.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -6547,11 +6547,11 @@ body.inactive .wish-block {
     color: #fda3c4;
   }
   .menu__bag._active .icon-bag {
-    background-image: url(img/icons/shopping-bag2.svg);
+    background-image: url(../img/icons/shopping-bag2.svg);
   }
   .icon-bag {
     display: block;
-    background-image: url(img/icons/shopping-bag.svg);
+    background-image: url(../img/icons/shopping-bag.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -6564,11 +6564,11 @@ body.inactive .wish-block {
     color: #fda3c4;
   }
   .menu__wishlist._active .icon-wishlist {
-    background-image: url(img/icons/favorite2.svg);
+    background-image: url(../img/icons/favorite2.svg);
   }
   .icon-wishlist {
     display: block;
-    background-image: url(img/icons/favorite.svg);
+    background-image: url(../img/icons/favorite.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
