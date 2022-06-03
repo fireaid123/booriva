@@ -4770,7 +4770,7 @@ body.inactive {
    }
    .menu__bot {
       width: 100%;
-      max-height: 59px;
+      min-height: 59px;
       position: fixed;
       z-index: 99999;
       bottom: 0;
@@ -4781,6 +4781,9 @@ body.inactive {
       text-align: center;
       border-top: 1px solid #fda3c4;
       box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.1);
+      &_catalog {
+         max-height: 59px;
+      }
    }
    .menu__bot > a {
       display: flex;
