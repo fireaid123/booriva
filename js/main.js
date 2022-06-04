@@ -659,7 +659,7 @@ if (topWrapper) {
 
 const recommendation = document.querySelector('.recommendation')
 if (recommendation) {
-let recommendationSlider = new Swiper('.recommendation-slider', {
+   let recommendationSlider = new Swiper('.recommendation-slider', {
       navigation: {
          nextEl: '.swiper-button-next',
          prevEl: '.swiper-button-prev'
