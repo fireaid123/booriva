@@ -4766,7 +4766,13 @@ body.inactive {
       display: none;
    }
    .logo {
-      order: -1;
+      order: 0;
+   }
+   .contacts {
+      order: 1;
+   }
+   .actions {
+      order: 2;
    }
    .menu__bot {
       width: 100%;

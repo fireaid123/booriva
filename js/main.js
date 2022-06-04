@@ -380,7 +380,6 @@ if (titleBlockSubtitleIcon) {
    });
 }
 let imagesSlider;
-
 if (imagesSlider) {
    imagesSlider = new Swiper('.images-slider', {
       // Стрелки
@@ -624,6 +623,7 @@ if (imagesSlider) {
       }
    });
 }
+
 let topSlider;
 if (topSlider) {
    topSlider = new Swiper('.top-slider', {
@@ -656,6 +656,7 @@ if (topSlider) {
       },
    });
 }
+
 let recommendationSlider;
 if (recommendationSlider) {
    recommendationSlider = new Swiper('.recommendation-slider', {
