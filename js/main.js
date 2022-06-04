@@ -379,8 +379,8 @@ if (titleBlockSubtitleIcon) {
       productsContainer.classList.toggle('_active');
    });
 }
-let imagesSlider;
-if (imagesSlider) {
+
+if (pageTable) {
    imagesSlider = new Swiper('.images-slider', {
       // Стрелки
       // navigation: {
@@ -624,8 +624,8 @@ if (imagesSlider) {
    });
 }
 
-let topSlider;
-if (topSlider) {
+const topWrapper = document.querySelector('.top-wrapper')
+if (topWrapper) {
    topSlider = new Swiper('.top-slider', {
       touchRatio: 0,
       loop: true,
@@ -657,9 +657,9 @@ if (topSlider) {
    });
 }
 
-let recommendationSlider;
-if (recommendationSlider) {
-   recommendationSlider = new Swiper('.recommendation-slider', {
+const recommendation = document.querySelector('.recommendation')
+if (recommendation) {
+let recommendationSlider = new Swiper('.recommendation-slider', {
       navigation: {
          nextEl: '.swiper-button-next',
          prevEl: '.swiper-button-prev'
