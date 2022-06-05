@@ -622,17 +622,22 @@ body._lock {
    &__image {
       overflow: hidden;
       transition: all .3s ease 0s;
-      &:hover {
-         box-shadow: 3px 4px 10px 0px rgb(0, 0, 0);
+      @media (any-hover:hover) {
+         &:hover {
+            box-shadow: 3px 4px 10px 0px rgb(0, 0, 0);
+         }
       }
    }
    &__img {
       width: 100%;
       height: auto;
       transition: all .3s ease 0s;
-      &:hover {
-         transform: scale(1.03);
+      @media (any-hover:hover) {
+         &:hover {
+            transform: scale(1.03);
+         }
       }
+
    }
    &__images {
       display: flex;
@@ -787,9 +792,11 @@ body._lock {
       max-width: 100%;
       max-height: 434px;
       transition: all 0.5s ease-out;
-   }
-   &__img:hover {
-      transform: scale(1.05);
+      @media (any-hover:hover) {
+         &:hover {
+            transform: scale(1.05);
+         }
+      }
    }
    &__icon {
       background-image: url(../img/icons/card-icon.svg);
@@ -1254,10 +1261,12 @@ path {
       max-width: 360px;
       position: relative;
       transition: all .3s ease;
-      &:hover {
-         transform: scale(1.2, 1.1);
-         z-index: 4;
-         box-shadow: 1px 2px 5px 0px #1f1f1f, -1px -2px 5px 0px #1f1f1f;
+      @media (any-hover: hover) {
+         &:hover {
+            transform: scale(1.2, 1.1);
+            z-index: 4;
+            box-shadow: 1px 2px 5px 0px #1f1f1f, -1px -2px 5px 0px #1f1f1f;
+         }
       }
    }
    &__img {
@@ -1443,8 +1452,10 @@ path {
       width: 100%;
       height: auto;
       transition: all 0.4s ease-out;
-      &:hover {
-         transform: scale(1.05);
+      @media (any-hover: hover) {
+         &:hover {
+            transform: scale(1.05);
+         }
       }
       &_big {
          transition: all 1s ease;
@@ -1571,8 +1582,10 @@ path {
       line-height: 51px;
       color: #F40000;
       margin: 0px 0px 10px 10px;
-      &:hover {
-         color: #FF94BB;
+      @media (any-hover:hover) {
+         &:hover {
+            color: #FF94BB;
+         }
       }
    }
    &__text {
@@ -2988,34 +3001,59 @@ body.inactive {
    .new__card {
       display: flex;
    }
+
 }
-.recommendation-slider .swiper-button-prev,
-.recommendation-slider .swiper-button-next {
-   top: 40%;
-   background-color: rgba(230, 223, 223, 0.63);
-   border-radius: 50%;
-   width: 55px;
-   height: 55px;
-   @media (any-hover: hover) {
-      &:hover {
-         background-color: #1f1f1f;
+@media (any-hover: hover) {
+   .swiper:hover {
+      .swiper-button-prev,
+      .swiper-button-next {
+         opacity: 0.7;
       }
    }
 }
-.recommendation-slider .swiper-button-prev::after,
-.recommendation-slider .swiper-button-next::after {
-   color: #fff;
+// .recommendation-slider
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+   top: 40%;
+   background-color: #fff;
+   box-shadow: 0 0 2px rgba(0, 0, 0, 0.12),
+               0 0 20px rgba(0, 0, 0, 0.4);
+   border-radius: 50%;
+   width: 55px;
+   height: 55px;
+   opacity: 0;
+   @media (any-hover: hover) {
+      &:hover {
+         opacity: 1;
+      }
+   }
+}
+// .recommendation-slider 
+.swiper-button-prev::after,
+.swiper-button-next::after {
+   color: rgb(99, 98, 98);
    font-size: 35px;
+   transition: color .3s ease 0s;
+}
+.swiper-button-prev:hover::after,
+.swiper-button-next:hover::after {
+   color: #fda3c4;
 }
 .swiper-button-prev,
 .swiper-button-next {
    transition: opacity 0.3s ease 0s;
 }
-.swiper-button-prev.swiper-button-disabled,
-.swiper-button-next.swiper-button-disabled {
-   opacity: 0;
-   overflow: hidden;
+.swiper {
+   .swiper-button-prev.swiper-button-disabled,
+   .swiper-button-next.swiper-button-disabled {
+      opacity: 0;
+      overflow: hidden;
+   }
 }
+
+
+
+
 .wrapper {
    padding: 30px;
    min-height: 100%;
@@ -3552,8 +3590,10 @@ body.inactive {
          gap: 11px;
       }
       &__image {
-         &:hover {
-            box-shadow: 2px 2px 6px 0px rgb(0, 0, 0);
+         @media (any-hover:hover) {
+            &:hover {
+               box-shadow: 2px 2px 6px 0px rgb(0, 0, 0);
+            }
          }
       }
       &__images {

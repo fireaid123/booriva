@@ -174,8 +174,10 @@
       color: #F40000;
       padding-bottom: 12px;
       border-bottom: 1px solid #f40000;
-      &:hover {
-         text-shadow: 2px 2px 0px #000;
+      @media (any-hover:hover) {
+         &:hover {
+            text-shadow: 2px 2px 0px #000;
+         }
       }
       @media (max-width: 769px) {
          font-size: 16px;
@@ -186,9 +188,12 @@
       }
    }
 }
-.instagram-icon:hover > g > path {
-   fill: #E1306C;
+@media (any-hover:hover) {
+   .instagram-icon:hover > g > path {
+      fill: #E1306C;
+   }
+   .facebook-icon:hover > g > path {
+      fill: #0954e7;
+   }
 }
-.facebook-icon:hover > g > path {
-   fill: #0954e7;
-}
+

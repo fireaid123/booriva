@@ -624,7 +624,8 @@ let imagesSlider = new Swiper('.images-slider', {
 
 // const topWrapper = document.querySelector('.top-wrapper')
 let topSlider = new Swiper('.top-slider', {
-   touchRatio: 0,
+   simulateTouch: false,
+   touchRatio: 1,
    loop: true,
    freeMode: true,
    spaceBetween: 130,
@@ -683,3 +684,31 @@ let recommendationSlider = new Swiper('.recommendation-slider', {
    observeSlideChildren: true,
 });
 
+let newSlider = new Swiper('.new-slider', {
+   navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+   },
+   grabCursor: true,
+   mousewheel: {
+      sensitivity: 1,
+      eventsTarget: ".new-slider"
+   },
+   breakpoints: {
+      320: {
+         slidesPerView: 1,
+      },
+      481: {
+         slidesPerView: 2,
+      },
+      769: {
+         slidesPerView: 3,
+      },
+      1001: {
+         slidesPerView: 4,
+      }
+   },
+   observer: true,
+   // observeParents: true,
+   // observeSlideChildren: true,
+});

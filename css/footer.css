@@ -261,8 +261,10 @@
   border-bottom: 1px solid #f40000;
 }
 
-.footer__item-feedback .feedback__title:hover {
-  text-shadow: 2px 2px 0px #000;
+@media (any-hover: hover) {
+  .footer__item-feedback .feedback__title:hover {
+    text-shadow: 2px 2px 0px #000;
+  }
 }
 
 @media (max-width: 769px) {
@@ -278,10 +280,11 @@
   }
 }
 
-.instagram-icon:hover > g > path {
-  fill: #E1306C;
-}
-
-.facebook-icon:hover > g > path {
-  fill: #0954e7;
+@media (any-hover: hover) {
+  .instagram-icon:hover > g > path {
+    fill: #E1306C;
+  }
+  .facebook-icon:hover > g > path {
+    fill: #0954e7;
+  }
 }
