@@ -85,6 +85,9 @@ const catalogFilterClose = document.querySelector('.catalog__filter-close');
 const itemCatalogSubtitles = document.querySelectorAll('.item-catalog__subtitle');
 const productsContainer = document.querySelector('.products__container');
 const titleBlockSubtitleIcon = document.querySelector('.title-block__subtitle-icon');
+
+
+
 if (window.matchMedia("(max-width: 769px)").matches) {
    if (linkMenus.length > 0) {
       for (let index = 0; index < linkMenus.length; index++) {
@@ -181,12 +184,12 @@ if (menuLogo) {
       }
    });
 }
-if (searchSvg) {
-   searchSvg.addEventListener("click", function (e) {
-      searchSvg.parentElement.classList.toggle('_active');
-      headerSearch.classList.toggle('_active');
-   });
-}
+// if (searchSvg) {
+//    searchSvg.addEventListener("click", function (e) {
+//       searchSvg.parentElement.classList.toggle('_active');
+//       headerSearch.classList.toggle('_active');
+//    });
+// }
 if (contentPageTable) {
    contentPageTable.addEventListener("click", function (e) {
       contentPageTable.classList.toggle('_active');
@@ -379,6 +382,31 @@ if (titleBlockSubtitleIcon) {
       productsContainer.classList.toggle('_active');
    });
 }
+
+const toggleMenu = function () {
+   headerSearch.classList.toggle("_active");
+   searchSvg.parentElement.classList.toggle('_active');
+}
+
+searchSvg.addEventListener("click", function (e) {
+   // headerSearch.classList.toggle(".active");
+   e.stopPropagation();
+   toggleMenu();
+});
+
+document.addEventListener("click", function (e) {
+   const target = e.target;
+   const its_headerSearch = target == headerSearch || headerSearch.contains(target);
+   const its_searchSvg = target == searchSvg;
+   const headerSearch_is_active = headerSearch.classList.contains("_active");
+
+   if (!its_headerSearch && !its_searchSvg && headerSearch_is_active) {
+      toggleMenu();
+   }
+});
+
+
+
 
 let imagesSlider = new Swiper('.images-slider', {
    // Стрелки
