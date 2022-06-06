@@ -625,31 +625,31 @@ let imagesSlider = new Swiper('.images-slider', {
 // const topWrapper = document.querySelector('.top-wrapper')
 let topSlider = new Swiper('.top-slider', {
    simulateTouch: false,
-   touchRatio: 1,
+   touchRatio: 0,
    loop: true,
-   freeMode: true,
+   // freeMode: true,
    spaceBetween: 130,
    autoplay: {
-      delay: 1,
-      stopOnLastSlide: false,
-      disabledOnInteraction: false,
+      delay: 0,
+      // stopOnLastSlide: true,
+      // disabledOnInteraction: true,
    },
-   speed: 1000,
-   observer: true,
-   observeParents: true,
-   observeSlideChildren: true,
+   speed: 1500,
    breakpoints: {
       320: {
          slidesPerView: 1.6,
          loopedSlides: 1.6,
-      },
-      481: {
+         observer: true,
+         observeParents: true,
+         observeSlideChildren: true,
+         },
+      482: {
          slidesPerView: 2.6,
          loopedSlides: 2.6,
       },
-      1001: {
-         loopedSlides: 3.6,
+      1002: {
          slidesPerView: 3.6,
+         loopedSlides: 3.6,
       }
    },
 });

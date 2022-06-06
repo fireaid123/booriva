@@ -89,4 +89,5 @@ time, mark, audio, video, svg, input {
   font-size: 100%;
   background-color: transparent;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-appearance: none;
 }
