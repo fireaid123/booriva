@@ -3191,6 +3191,10 @@ body.inactive {
       width: 113px;
       height: 30px;
    }
+   .logotip {
+      width: 113px;
+      height: 30px;
+   }
    .actions__search {
       margin-right: 33px;
    }
@@ -6652,6 +6656,9 @@ body.inactive {
 }
 @media (max-width: 320px) {
    .logo {
+      width: 80px;
+   }
+   .logotip {
       width: 80px;
    }
    .phone {
