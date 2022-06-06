@@ -709,6 +709,6 @@ let newSlider = new Swiper('.new-slider', {
       }
    },
    observer: true,
-   // observeParents: true,
-   // observeSlideChildren: true,
+   observeParents: true,
+   observeSlideChildren: true,
 });
