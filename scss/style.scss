@@ -693,13 +693,8 @@ body._lock {
          margin-bottom: 12px;
       }
    }
-   &__cards {
-      display: flex;
+   &-slider {
       margin-bottom: 27px;
-      justify-content: center;
-      @media (max-width: 769px) {
-         flex-wrap: wrap;
-      }
       @media (max-width: 531px) {
          margin-bottom: 15px;
       }

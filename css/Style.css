@@ -1318,25 +1318,12 @@ body._lock {
   }
 }
 
-.new__cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.new-slider {
   margin-bottom: 27px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-@media (max-width: 769px) {
-  .new__cards {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
 }
 
 @media (max-width: 531px) {
-  .new__cards {
+  .new-slider {
     margin-bottom: 15px;
   }
 }
