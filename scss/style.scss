@@ -120,10 +120,10 @@ body {
    width: 20px;
    height: 20px;
 }
-// .logo {
-//    width: 160px;
-//    height: 40px;
-// }
+.logo {
+   width: 160px;
+   height: 40px;
+}
 .actions__search {
    display: flex;
    align-items: center;
@@ -3187,10 +3187,10 @@ body.inactive {
       top: -3px;
       left: -20px;
    }
-   // .logo {
-   //    width: 113px;
-   //    height: 30px;
-   // }
+   .logo {
+      width: 113px;
+      height: 30px;
+   }
    .actions__search {
       margin-right: 33px;
    }
@@ -6651,9 +6651,9 @@ body.inactive {
    }
 }
 @media (max-width: 320px) {
-   // .logo {
-   //    // width: 80px;
-   // }
+   .logo {
+      width: 80px;
+   }
    .phone {
       font-size: 10px;
    }
