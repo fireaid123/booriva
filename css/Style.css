@@ -5344,9 +5344,11 @@ body.inactive .wish-block {
     -webkit-transition: left 0.5s ease 0s;
     transition: left 0.5s ease 0s;
     overflow: auto;
+    opacity: 0;
   }
   .header__menu._active {
     left: 0;
+    opacity: 1;
   }
   .header__menu::before {
     content: "";
