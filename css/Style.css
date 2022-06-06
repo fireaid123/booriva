@@ -91,7 +91,6 @@ time, mark, audio, video, svg, input {
   font-size: 100%;
   background-color: transparent;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-appearance: none;
 }
 
 .footer {
@@ -760,7 +759,6 @@ body._lock {
   -webkit-box-shadow: 0px 2px 2px 0px #fda3c4;
           box-shadow: 0px 2px 2px 0px #fda3c4;
   border-radius: 8px;
-  -webkit-appearance: none;
 }
 
 .form-search__input {
@@ -772,7 +770,6 @@ body._lock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: transparent;
   padding: 0px 54px 0px 54px;
 }
 
@@ -815,6 +812,8 @@ body._lock {
   border-radius: 50%;
   background-color: #F40000;
   cursor: pointer;
+  opacity: 0;
+  overflow: hidden;
 }
 
 .form-search__close::before {
@@ -843,6 +842,11 @@ body._lock {
 
 .form-search__input:focus + .form-search__button::after {
   background-color: transparent;
+}
+
+.form-search__input:focus + button + button {
+  opacity: 1;
+  overflow: auto;
 }
 
 .form-search__input::-webkit-input-placeholder {

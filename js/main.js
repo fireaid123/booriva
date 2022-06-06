@@ -696,19 +696,19 @@ let newSlider = new Swiper('.new-slider', {
    },
    breakpoints: {
       320: {
-         slidesPerView: 1,
+         slidesPerView: 1
       },
       481: {
-         slidesPerView: 2,
+         slidesPerView: 2
       },
       769: {
-         slidesPerView: 3,
+         slidesPerView: 3
       },
       1001: {
-         slidesPerView: 4,
+         slidesPerView: 4
       }
    },
    observer: true,
    observeParents: true,
-   observeSlideChildren: true,
+   observeSlideChildren: true
 });

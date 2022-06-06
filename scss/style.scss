@@ -309,7 +309,6 @@ body._lock {
       outline: 2px solid #FDA3C4;
       box-shadow: 0px 2px 2px 0px rgba(253, 163, 196, 1);
       border-radius: 8px;
-      -webkit-appearance: none;
    }
 }
 .form-search {
@@ -320,7 +319,6 @@ body._lock {
       line-height: 30px;
       height: 54px;
       display: flex;
-      background-color: transparent;
       padding: 0px 54px 0px 54px;
    }
    &__button {
@@ -353,6 +351,8 @@ body._lock {
       border-radius: 50%;
       background-color: #F40000;
       cursor: pointer;
+      opacity: 0;
+      overflow: hidden;
       &::before {
          content: '';
          position: absolute;
@@ -377,6 +377,10 @@ body._lock {
 }
 .form-search__input:focus + .form-search__button::after {
    background-color: transparent;
+}
+.form-search__input:focus + button + button {
+   opacity: 1;
+   overflow: auto;
 }
 .form-search__input::placeholder {
    font-style: italic;
