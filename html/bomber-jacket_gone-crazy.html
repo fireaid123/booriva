@@ -428,33 +428,44 @@
                   <div class="images-slider__wrapper swiper-wrapper">
                      <div class="images-slider__slide swiper-slide">
                         <div class="images-slider__image">
+                           <div class="card__icon"></div>
                            <img class="images-slider__img" src="../img/page-image-big-1.jpg" alt="Картинка">
                         </div>
                      </div>
                      <div class="images-slider__slide swiper-slide">
                         <div class="images-slider__image">
+                           <div class="card__icon"></div>
                            <img class="images-slider__img" src="../img/page-image-big-2.jpg" alt="Картинка">
                         </div>
                      </div>
                      <div class="images-slider__slide swiper-slide">
                         <div class="images-slider__image">
+                           <div class="card__icon"></div>
                            <img class="images-slider__img" src="../img/page-image-big-3.jpg" alt="Картинка">
                         </div>
                      </div>
                      <div class="images-slider__slide swiper-slide">
                         <div class="images-slider__image">
+                           <div class="card__icon"></div>
                            <img class="images-slider__img" src="../img/page-image-big-4.jpg" alt="Картинка">
                         </div>
                      </div>
                      <div class="images-slider__slide swiper-slide">
                         <div class="images-slider__image">
+                           <div class="card__icon"></div>
                            <img class="images-slider__img" src="../img/page-image-big-2.jpg" alt="Картинка">
                         </div>
                      </div>
                   </div>
+                  <div class="images-mini-slider-pagination swiper-pagination"></div>
                </div>
                <div class="images-mini-slider swiper">
                   <div class="images-mini-slider__wrapper swiper-wrapper">
+                     <div class="images-mini-slider__slide swiper-slide">
+                        <div class="images-mini-slider__image">
+                           <img class="images-mini-slider__img" src="../img/page-image-3.jpg" alt="Картинка">
+                        </div>
+                     </div>
                      <div class="images-mini-slider__slide swiper-slide">
                         <div class="images-mini-slider__image">
                            <img class="images-mini-slider__img" src="../img/page-image-1.jpg" alt="Картинка">
@@ -463,11 +474,6 @@
                      <div class="images-mini-slider__slide swiper-slide">
                         <div class="images-mini-slider__image">
                            <img class="images-mini-slider__img" src="../img/page-image-2.jpg" alt="Картинка">
-                        </div>
-                     </div>
-                     <div class="images-mini-slider__slide swiper-slide">
-                        <div class="images-mini-slider__image">
-                           <img class="images-mini-slider__img" src="../img/page-image-3.jpg" alt="Картинка">
                         </div>
                      </div>
                      <div class="images-mini-slider__slide swiper-slide">
@@ -481,7 +487,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="images-mini-slider-pagination swiper-pagination"></div>
+                  <!-- <div class="images-mini-slider-pagination swiper-pagination"></div> -->
                </div>
                
             </div>
@@ -489,17 +495,38 @@
                <div class="content-page__title">Бомбер Gone Crazy хаки</div>
                <div class="content-page__price">2 499 ₴</div>
                <div class="content-page__size size-content-page">
-                  <div class="size-content-page__title">Выбрать размер:</div>
+                  <div class="size-content-page__title size-content-page__title_1">Выбрать размер:</div>
+                  <div class="size-content-page__title size-content-page__title_2">Размер:</div>
+                  <div class="size-content-page__subtitle">
+                     Выбери размер
+                     <div class="size-content-page__icon"></div>
+                  </div>
                   <ul class="size-content-page__list">
-                     <li class="size-content-page__item">XS — S</li>
-                     <li class="size-content-page__item">S — M</li>
-                     <li class="size-content-page__item">M — L</li>
-                     <li class="size-content-page__item">L — XL</li>
+                     <li class="size-content-page__item-title">
+                        <p class="size-content-page__item-paragraph">Выбери размер</p>
+                        <div class="size-content-page__item-icon"></div>
+                     </li>
+                     <li class="size-content-page__item">
+                        <div class="size-content-page__item-text">нет в наличии</div>
+                        <div class="size-content-page__item-size">XS — S</div>
+                     </li>
+                     <li class="size-content-page__item _active">
+                        <div class="size-content-page__item-text">нет в наличии</div>
+                        <div class="size-content-page__item-size">S — M</div>
+                     </li>
+                     <li class="size-content-page__item">
+                        <div class="size-content-page__item-text">нет в наличии</div>
+                        <div class="size-content-page__item-size">M — L</div>
+                     </li>
+                     <li class="size-content-page__item">
+                        <div class="size-content-page__item-text">нет в наличии</div>
+                        <div class="size-content-page__item-size">L — XL</div>
+                     </li>
                   </ul>
                </div>
                <div class="content-page__buttons">
                   <div class="content-page__button button">
-                     <a class="btn" href="#">
+                     <button class="btn" type="submit">
                         <div class="content-page__button-text button__text">в корзину</div>
                         <svg width="224" height="59" viewBox="0 0 224 59" fill="none"
                            xmlns="http://www.w3.org/2000/svg">
@@ -510,13 +537,13 @@
                               d="M13.0784 51.3968C12.1808 51.3968 12.1459 52.2938 12.2406 52.7423L10.4181 52.9665C9.5319 53.714 7.92776 55.1641 8.60042 54.9847C9.27309 54.8053 10.562 54.312 11.1223 54.0878C11.4955 53.7888 14.0369 53.1908 21.2171 53.1908C30.1925 53.1908 29.3498 52.7423 30.1913 52.7423C31.0327 52.7423 14.2003 51.3968 13.0784 51.3968Z"
                               fill="#FDA3C4" />
                         </svg>
-                     </a>
+                     </button>
                   </div>
                   <div class="content-page__button button">
                      <a class="btn" href="checkout.html">
                         <div class="content-page__button-text button__text content-page__button-text_color">Быстрый
                            заказ</div>
-                        <svg width="222" height="57" viewBox="0 0 222 57" fill="none"
+                        <svg  width="222" height="57" viewBox="0 0 222 57" fill="none"
                            xmlns="http://www.w3.org/2000/svg">
                            <path
                               d="M6.71469 39.615L3.05371 34.2331L1.0318 12.7056C2.79991 9.64093 8.97222 3.33217 19.5166 2.61458C32.6972 1.7176 38.7941 0.810288 53.9411 1.03453C69.0881 1.25878 161.929 1.48496 167.259 1.48496C172.588 1.48496 198.986 0.812408 206.008 4.1759C211.625 6.86669 216.781 12.0244 218.657 14.2669C218.097 14.7154 217.316 16.1056 218.667 18.079C220.019 20.0523 220.738 23.0871 220.928 24.3578C220.182 25.1053 218.691 26.7797 218.693 27.4972C218.695 28.3942 213.647 28.6185 216.175 29.7397C218.197 30.6367 218.709 33.2529 218.712 34.4488C216.751 35.5701 211.933 37.8574 208.344 38.0368C204.754 38.2162 201.614 39.0085 200.493 39.3822L200.498 41.1763C202.182 41.4753 205.213 42.1629 203.868 42.5216C202.186 42.9701 200.5 41.8489 199.1 42.5216C197.699 43.1944 195.739 44.5399 197.423 44.9884C197.941 45.4016 198.448 45.6077 198.902 45.6879C199.458 45.5805 200.06 45.4922 200.51 45.4368C200.222 45.621 199.63 45.8166 198.902 45.6879C197.957 45.8703 197.144 46.108 197.427 46.3338C197.877 46.6926 199.673 47.2308 200.515 47.455L201.922 48.8005H197.434C194.965 48.8005 195.474 50.146 196.037 50.8187C195.383 50.9682 193.682 51.1775 192.11 50.8187C190.145 50.3702 190.989 51.043 187.623 51.2672C184.931 51.4466 170.293 51.342 165.711 51.2672C166.084 50.9682 166.326 50.3702 164.306 50.3702C161.782 50.3702 161.501 50.3702 158.417 50.8187C155.333 51.2672 56.88 50.3683 47.3434 50.3683C39.7141 50.3683 49.4094 49.2574 48.0069 49.2574C43.6146 50.0049 28.4006 51.455 21.8928 51.2756C13.758 51.0513 6.73967 48.8089 6.73906 48.5847C6.73857 48.4053 5.23926 47.1644 4.48967 46.5664C5.23865 46.9402 6.73601 47.4634 6.73357 46.5664C6.73114 45.6695 5.22809 43.0533 4.47687 41.8573L6.71469 39.615Z"

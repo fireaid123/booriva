@@ -387,7 +387,6 @@ const toggleMenu = function () {
    headerSearch.classList.toggle("_active");
    searchSvg.parentElement.classList.toggle('_active');
 }
-
 searchSvg.addEventListener("click", function (e) {
    // headerSearch.classList.toggle(".active");
    e.stopPropagation();
@@ -417,16 +416,17 @@ let imagesSlider = new Swiper('.images-slider', {
 
    // // Навигация
    // // Буллеты, текущее положение, прогрессбар
-   // pagination: {
-   //    el: '.swiper-pagination',
-   //    // // Буллеты
-   // clickable: true,
-   // // Динамические буллеты
-   // dynamicBullets: true,
-   // // Кастомные буллеты
-   // renderBullet: function (index, className) {
-   //    return '<span class="' + className + '">' + (index + 1) + '</span>';
-   // },
+   pagination: {
+      el: '.swiper-pagination',
+      // // Буллеты
+      clickable: true,
+      // Динамические буллеты
+      // dynamicBullets: true,
+      // Кастомные буллеты
+      // renderBullet: function (index, className) {
+      //    // return '<span class="' + className + '">' + (index + 1) + '</span>';
+      // }
+   },
    //    // Фракция
    /*
    type: 'fraction',
@@ -490,7 +490,7 @@ let imagesSlider = new Swiper('.images-slider', {
    watchOverflow: false, // Теперь включен по умолчанию поэтому можно не писать
 
    // Отуступ между слайдами
-   spaceBetween: 30,
+   // spaceBetween: 30,
 
    // Количество пролистываемых слайдов
    slidesPerGroup: 1,
@@ -505,9 +505,7 @@ let imagesSlider = new Swiper('.images-slider', {
    // slidesPerColumn: 2, // Для корректной работы нужно отключить автовысоту также необходимо в css изменить стили
 
    // Бесконечный слайдер
-   loop: true,
    // Количество дублирующих слайдов
-   loopedSlides: 1,
 
    // // Свободный режим
    // freeMode: true,
@@ -524,7 +522,10 @@ let imagesSlider = new Swiper('.images-slider', {
 
    // Скорость
    speed: 800,
-
+   // zoom: {
+   //    maxRatio: 5,
+   //    minRatio: 1,
+   // },
    // // Вертикальный слайдер
    // direction: 'vertical', // Для корректной работы нужна высота всего слайдера
 
@@ -590,16 +591,36 @@ let imagesSlider = new Swiper('.images-slider', {
    // },
 
    // Миниатюры (превью)
+   observer: true,
+   observeParents: true,
+   observeSlideChildren: true,
+   breakpoints: {
+      320: {
+         loop: false,
+         loopedSlides: 1,
+      },
+      481: {
+      },
+      531: {
+
+      },
+      769: {
+         loop: true,
+      },
+      1002: {
+      }
+   },
    thumbs: {
       // Свайпер с миниатюрами и его настройки
       swiper: {
          el: '.images-mini-slider',
-         slidesPerView: 4,
-         direction: 'vertical', // Для корректной работы нужна высота всего слайдера
+         // direction: 'vertical', // Для корректной работы нужна высота всего слайдера
+            // freeMode: true,   
+         
          // Бесконечный слайдер
-         loop: true,
+         // loop: true,
          // Количество дублирующих слайдов
-         loopedSlides: 4,
+         // loopedSlides: 4,
          // Управление колесом мыши
          // slideToClickedSlide: true,
          mousewheel: {
@@ -617,35 +638,39 @@ let imagesSlider = new Swiper('.images-slider', {
          touchAngle: 45,
          // Курсор перетаскивания
          grabCursor: true,
-         pagination: {
-            el: '.swiper-pagination',
-            // // Буллеты
-            clickable: true,
+         // pagination: {
+         //    el: '.swiper-pagination',
+         //    // // Буллеты
+         //    clickable: true,
             // Динамические буллеты
             // dynamicBullets: true,
             // // Кастомные буллеты
             // renderBullet: function (index, className) {
             //    return '<span class="' + className + '">' + (index + 1) + '</span>';
-         },
-         // breakpoints: {
-         //    320: {
-         //       // slidesPerView: 1,
-         //    },
-         //    481: {
-         //       // direction: 'horizontal',
-         //    },
-         //    531: {
-         //    },
-         //    769: {
-         //    },
-         //    1001: {
-         //    // slidesPerView: 3,
-         //       // direction: 'horizontal',
-         //    }
          // },
-         // observer: true,
-         // observeParents: true,
-         // observeSlideChildren: true,
+         breakpoints: {
+            320: {
+               observer: true,
+               observeParents: true,
+               observeSlideChildren: true,
+               slidesPerView: 3,
+               // spaceBetween: 60
+            },
+            481: {
+            },
+            531: {
+               slidesPerView: 5,
+               spaceBetween: 30
+            },
+            769: {
+               slidesPerView: 4,
+               spaceBetween: 25
+            },
+            1002: {
+               slidesPerView: 5,
+               spaceBetween: 50
+            }
+         },
       },
    }
 });
