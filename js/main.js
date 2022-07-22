@@ -67,6 +67,7 @@ const searchSvg = document.querySelector('.search-svg');
 const headerSearch = document.querySelector('.header__search');
 let cardIcons = document.querySelectorAll('.card__icon');
 let itemTopIcons = document.querySelectorAll('.item-top__icon');
+let itemTopShops = document.querySelectorAll('.item-top__shop');
 let linkMenus = document.querySelectorAll('.link-menu');
 let menuItems = document.querySelectorAll('.menu__item');
 const menuClose = document.querySelector('.menu__close');
@@ -85,8 +86,7 @@ const catalogFilterClose = document.querySelector('.catalog__filter-close');
 const itemCatalogSubtitles = document.querySelectorAll('.item-catalog__subtitle');
 const productsContainer = document.querySelector('.products__container');
 const titleBlockSubtitleIcon = document.querySelector('.title-block__subtitle-icon');
-
-
+const cardShops = document.querySelectorAll('.card__shop');
 
 if (window.matchMedia("(max-width: 769px)").matches) {
    if (linkMenus.length > 0) {
@@ -110,30 +110,6 @@ if (window.matchMedia("(max-width: 769px)").matches) {
       }
    }
 }
-// if (linkMenus.length > 0) {
-//    // Далее если мы прошли проверку и такие стрелочки у нас есть, мы запускаем цикл чтобы по всем им пробежаться
-//    // создаем константу с каждой из этих стрелочек в данной ситуации одна
-//    for (let index = 0; index < linkMenus.length; index++) {
-//       // const cardIcona = cardIcons[index];
-//       let linkMenu = linkMenus[index];
-//       // Далее мы с на каждую из них будем навешивать событие клик
-//       linkMenu.addEventListener("click", function(e) {
-//          // Что нам нужно сделать при клике на стрелочку? Самый простой вариант это просто навешать какой то класс непосредственно родителю нажатой стрелочки.
-//          linkMenu.parentElement.classList.toggle('_active');
-//          menuClose.classList.toggle('_active')
-//          iconMenu.classList.toggle('_lock');
-//          menuHeader.classList.toggle('_lock');
-//          menuLogo.classList.toggle('_lock');
-//          // document.body.classList.toggle('_lock');
-//       });
-//       menuClose.addEventListener("click", function (e) {
-//          menuClose.classList.remove('_active');
-//          iconMenu.classList.remove('_lock');
-//          menuHeader.classList.remove('_lock');
-//          linkMenu.parentElement.classList.remove('_active');
-//       });
-//    }
-// }
 if (iconMenu) {
    iconMenu.addEventListener("click", function (e) {
       searchSvg.parentElement.classList.remove('_active');
@@ -184,12 +160,6 @@ if (menuLogo) {
       }
    });
 }
-// if (searchSvg) {
-//    searchSvg.addEventListener("click", function (e) {
-//       searchSvg.parentElement.classList.toggle('_active');
-//       headerSearch.classList.toggle('_active');
-//    });
-// }
 if (contentPageTable) {
    contentPageTable.addEventListener("click", function (e) {
       contentPageTable.classList.toggle('_active');
@@ -359,7 +329,33 @@ if (cardIcons.length > 0) {
       // Далее мы с на каждую из них будем навешивать событие клик
       cardIcon.addEventListener("click", function (e) {
          // Что нам нужно сделать при клике на стрелочку? Самый простой вариант это просто навешать какой то класс непосредственно родителю нажатой стрелочки.
-         cardIcon.parentElement.classList.toggle('_active');
+         e.target.classList.toggle('_active');
+      });
+   }
+}
+if (cardShops.length > 0) {
+   // Далее если мы прошли проверку и такие стрелочки у нас есть, мы запускаем цикл чтобы по всем им пробежаться
+   // создаем константу с каждой из этих стрелочек в данной ситуации одна
+   for (let index = 0; index < cardShops.length; index++) {
+      // const cardIcona = cardIcons[index];
+      const cardShop = cardShops[index];
+      // Далее мы с на каждую из них будем навешивать событие клик
+      cardShop.addEventListener("click", function (e) {
+         // Что нам нужно сделать при клике на стрелочку? Самый простой вариант это просто навешать какой то класс непосредственно родителю нажатой стрелочки.
+         e.target.classList.toggle('_active');
+      });
+   }
+}
+if (itemTopShops.length > 0) {
+   // Далее если мы прошли проверку и такие стрелочки у нас есть, мы запускаем цикл чтобы по всем им пробежаться
+   // создаем константу с каждой из этих стрелочек в данной ситуации одна
+   for (let index = 0; index < itemTopShops.length; index++) {
+      // const cardIcona = cardIcons[index];
+      const itemTopShop = itemTopShops[index];
+      // Далее мы с на каждую из них будем навешивать событие клик
+      itemTopShop.addEventListener("click", function (e) {
+         // Что нам нужно сделать при клике на стрелочку? Самый простой вариант это просто навешать какой то класс непосредственно родителю нажатой стрелочки.
+         e.target.classList.toggle('_active');
       });
    }
 }
@@ -372,7 +368,7 @@ if (itemTopIcons.length > 0) {
       // Далее мы с на каждую из них будем навешивать событие клик
       itemTopIcon.addEventListener("click", function (e) {
          // Что нам нужно сделать при клике на стрелочку? Самый простой вариант это просто навешать какой то класс непосредственно родителю нажатой стрелочки.
-         itemTopIcon.parentElement.classList.toggle('_active');
+         e.target.classList.toggle('_active');
       });
    }
 }
@@ -403,365 +399,558 @@ document.addEventListener("click", function (e) {
       toggleMenu();
    }
 });
+if (document.querySelector('.images-slider')) {
+   new Swiper('.images-slider', {
+      // Стрелки
+      // navigation: {
+      //    nextEl: '.swiper-button-next',
+      //    prevEl: '.swiper-button-prev'
+      // },
 
-
-
-
-let imagesSlider = new Swiper('.images-slider', {
-   // Стрелки
-   // navigation: {
-   //    nextEl: '.swiper-button-next',
-   //    prevEl: '.swiper-button-prev'
-   // },
-
-   // // Навигация
-   // // Буллеты, текущее положение, прогрессбар
-   pagination: {
-      el: '.swiper-pagination',
-      // // Буллеты
-      clickable: true,
-      // Динамические буллеты
-      // dynamicBullets: true,
-      // Кастомные буллеты
-      // renderBullet: function (index, className) {
-      //    // return '<span class="' + className + '">' + (index + 1) + '</span>';
-      // }
-   },
-   //    // Фракция
-   /*
-   type: 'fraction',
-   // Кастомный вывод фракции
-   renderFraction: function (currentClass, totalClass) {
-      return 'Фото <span class="' + currentClass + '"></span>' +
-      ' из ' +
-      '<span class="' + totalClass + '"></span>';
-   },
-   */
-   //    // // Прогрессбар
-   // type: 'progressbar'
-   // },
-
-   // // Скролл
-   // scrollbar: {
-   //    el: '.swiper-scrollbar',
-   //    // Возможность перетаскивать скролл
-   //    draggable: true,
-   // },
-
-   // Включение/отключение
-   // перетаскивания на ПК
-   simulateTouch: true,
-   // Чувствительность свайпа
-   touchRatio: 1, // 0 отключит способность перетаскивать на всех устройствах, если хотим чтобы слайды переключались легче то есть меньше применяли усилий то увеличиваем число
-   // Угол срабатывания свайпа/перетаскивания
-   touchAngle: 45,
-   // Курсор перетаскивания
-   grabCursor: true,
-
-   // // Управление клавиатурой 
-   // keyboard: {
-   //    // Включить/выключить
-   //    enabled: true,
-   //    // Включить/выключить только когда слайдер в пределах вьюпорта
-   //    onlyInViewport: true,
-   //    // Включить/выключить управление клавишами pageUp, pageDown
-   //    // pageUpDown: true, // не работает
-   // },
-
-   // Управление колесом мыши
-   mousewheel: {
-      // Чувствительность колеса мыши
-      sensitivity: 1,
-      // Класс объекта на котором будет срабатывать прокрутка мышью
-      eventsTarget: ".images-slider" // Если слайдеров много то будут прокручиваться все поэтому в таком случае лучше оставлять по умолчанию отключенным
-   },
-
-   // Автовысота
-   // autoHeight: true,
-
-   // Переключение при клике на слайд
-   // slideToClickedSlide: true, // Работает с slidesPerView
-
-   // Количество слайдов для показа
-   slidesPerView: 1, // можно указывать не только целые числа например 2.5
-   // slidesPerView: 'auto', // автоматическое количество слайдов для показа но для этого нужно добавить в css для слайда width: auto
-
-   // Отключение функционала, если слайдов меньше чем нужно
-   watchOverflow: false, // Теперь включен по умолчанию поэтому можно не писать
-
-   // Отуступ между слайдами
-   // spaceBetween: 30,
-
-   // Количество пролистываемых слайдов
-   slidesPerGroup: 1,
-
-   // // Активный слайд по центру
-   // centeredSlides: true,
-
-   // Стартовый слайд
-   // initialSlide: 1,
-
-   // // Мультирядность
-   // slidesPerColumn: 2, // Для корректной работы нужно отключить автовысоту также необходимо в css изменить стили
-
-   // Бесконечный слайдер
-   // Количество дублирующих слайдов
-
-   // // Свободный режим
-   // freeMode: true,
-
-   // // Автопрокрутка
-   // autoplay: {
-   //    // Пауза между прокруткой
-   //    delay: 1000,
-   //    // Закончить на последнем слайде
-   //    stopOnLastSlide: false,
-   //    // Отключить после ручного переключения
-   //    disabledOnInteraction: false,
-   // },
-
-   // Скорость
-   speed: 800,
-   // zoom: {
-   //    maxRatio: 5,
-   //    minRatio: 1,
-   // },
-   // // Вертикальный слайдер
-   // direction: 'vertical', // Для корректной работы нужна высота всего слайдера
-
-   // Эффекты переключения слайдов
-   // // Листание
-   // effect: 'slide',
-
-   // // Смена прозрачности
-   // effect: 'fade', // Подходит этот эффект для вывода одно слайда
-   // // Дополнение к fade
-   // fadeEffect: {
-   //    // Параллельная смена прозрачности
-   //    crossFade: true,
-   // },
-
-   // // Переворот
-   // effect: 'flip',
-   // // Дополнение к flip
-   // flipEffect: {
-   //    // Тень
-   //    slideShadows: true,
-   //    // Показ только активного слайда
-   //    limitRotation: true
-   // },
-
-   // // Куб
-   // effect: 'cube', // стоит ограничить ширину всего слайдера
-   // // Дополнение к 
-   // cubeEffect: {
-   //    // Настройки тени
-   //    slideShadow: true,
-   //    shadow: true,
-   //    shadowOffset: 20,
-   //    shadowScale: 0.94
-   // },
-
-   // // Эффект потока
-   // effect: 'coverflow',
-   // // Дополнение к coverflow
-   // coverflowEffect: {
-   //    // Угол
-   //    rotate: 20,
-   //    // Наложение
-   //    sctretch: 50,
-   //    // Тень
-   //    slideShadows: true,
-   // },
-
-   // // Брейк поинты (адаптив)
-   // // Ширина экрана
-   // breakpoints: {
-   //    320: {
-   //       slidesPerView: 1,
-   //    },
-   //    480: {
-   //       slidesPerView: 2,
-   //       // direction: 'horizontal',
-   //    },
-   //    992: {
-   //       slidesPerView: 3,
-   //       // direction: 'vertical',
-   //    }
-   // },
-
-   // Миниатюры (превью)
-   observer: true,
-   observeParents: true,
-   observeSlideChildren: true,
-   breakpoints: {
-      320: {
-         loop: false,
-         loopedSlides: 1,
+      // // Навигация
+      // // Буллеты, текущее положение, прогрессбар
+      pagination: {
+         el: '.swiper-pagination',
+         // // Буллеты
+         clickable: true,
+         // Динамические буллеты
+         // dynamicBullets: true,
+         // Кастомные буллеты
+         // renderBullet: function (index, className) {
+         //    // return '<span class="' + className + '">' + (index + 1) + '</span>';
+         // }
       },
-      481: {
+      //    // Фракция
+      /*
+      type: 'fraction',
+      // Кастомный вывод фракции
+      renderFraction: function (currentClass, totalClass) {
+         return 'Фото <span class="' + currentClass + '"></span>' +
+         ' из ' +
+         '<span class="' + totalClass + '"></span>';
       },
-      531: {
+      */
+      //    // // Прогрессбар
+      // type: 'progressbar'
+      // },
 
+      // // Скролл
+      // scrollbar: {
+      //    el: '.swiper-scrollbar',
+      //    // Возможность перетаскивать скролл
+      //    draggable: true,
+      // },
+
+      // Включение/отключение
+      // перетаскивания на ПК
+      simulateTouch: true,
+      // Чувствительность свайпа
+      touchRatio: 1, // 0 отключит способность перетаскивать на всех устройствах, если хотим чтобы слайды переключались легче то есть меньше применяли усилий то увеличиваем число
+      // Угол срабатывания свайпа/перетаскивания
+      touchAngle: 45,
+      // Курсор перетаскивания
+      grabCursor: true,
+
+      // // Управление клавиатурой 
+      // keyboard: {
+      //    // Включить/выключить
+      //    enabled: true,
+      //    // Включить/выключить только когда слайдер в пределах вьюпорта
+      //    onlyInViewport: true,
+      //    // Включить/выключить управление клавишами pageUp, pageDown
+      //    // pageUpDown: true, // не работает
+      // },
+
+      // Управление колесом мыши
+      mousewheel: {
+         // Чувствительность колеса мыши
+         sensitivity: 1,
+         // Класс объекта на котором будет срабатывать прокрутка мышью
+         eventsTarget: ".images-slider" // Если слайдеров много то будут прокручиваться все поэтому в таком случае лучше оставлять по умолчанию отключенным
       },
-      769: {
-         loop: true,
-      },
-      1002: {
-      }
-   },
-   thumbs: {
-      // Свайпер с миниатюрами и его настройки
-      swiper: {
-         el: '.images-mini-slider',
-         // direction: 'vertical', // Для корректной работы нужна высота всего слайдера
-            // freeMode: true,   
-         
-         // Бесконечный слайдер
-         // loop: true,
-         // Количество дублирующих слайдов
-         // loopedSlides: 4,
-         // Управление колесом мыши
-         // slideToClickedSlide: true,
-         mousewheel: {
-            // Чувствительность колеса мыши
-            sensitivity: 1,
-            // Класс объекта на котором будет срабатывать прокрутка мышью
-            eventsTarget: ".images-mini-slider" // Если слайдеров много то будут прокручиваться все поэтому в таком случае лучше оставлять по умолчанию отключенным
+
+      // Автовысота
+      // autoHeight: true,
+
+      // Переключение при клике на слайд
+      // slideToClickedSlide: true, // Работает с slidesPerView
+
+      // Количество слайдов для показа
+      slidesPerView: 1, // можно указывать не только целые числа например 2.5
+      // slidesPerView: 'auto', // автоматическое количество слайдов для показа но для этого нужно добавить в css для слайда width: auto
+
+      // Отключение функционала, если слайдов меньше чем нужно
+      watchOverflow: false, // Теперь включен по умолчанию поэтому можно не писать
+
+      // Отуступ между слайдами
+      // spaceBetween: 30,
+
+      // Количество пролистываемых слайдов
+      slidesPerGroup: 1,
+
+      // // Активный слайд по центру
+      // centeredSlides: true,
+
+      // Стартовый слайд
+      // initialSlide: 1,
+
+      // // Мультирядность
+      // slidesPerColumn: 2, // Для корректной работы нужно отключить автовысоту также необходимо в css изменить стили
+
+      // Бесконечный слайдер
+      // Количество дублирующих слайдов
+
+      // // Свободный режим
+      // freeMode: true,
+
+      // // Автопрокрутка
+      // autoplay: {
+      //    // Пауза между прокруткой
+      //    delay: 1000,
+      //    // Закончить на последнем слайде
+      //    stopOnLastSlide: false,
+      //    // Отключить после ручного переключения
+      //    disabledOnInteraction: false,
+      // },
+
+      // Скорость
+      speed: 800,
+      // zoom: {
+      //    maxRatio: 5,
+      //    minRatio: 1,
+      // },
+      // // Вертикальный слайдер
+      // direction: 'vertical', // Для корректной работы нужна высота всего слайдера
+
+      // Эффекты переключения слайдов
+      // // Листание
+      // effect: 'slide',
+
+      // // Смена прозрачности
+      // effect: 'fade', // Подходит этот эффект для вывода одно слайда
+      // // Дополнение к fade
+      // fadeEffect: {
+      //    // Параллельная смена прозрачности
+      //    crossFade: true,
+      // },
+
+      // // Переворот
+      // effect: 'flip',
+      // // Дополнение к flip
+      // flipEffect: {
+      //    // Тень
+      //    slideShadows: true,
+      //    // Показ только активного слайда
+      //    limitRotation: true
+      // },
+
+      // // Куб
+      // effect: 'cube', // стоит ограничить ширину всего слайдера
+      // // Дополнение к 
+      // cubeEffect: {
+      //    // Настройки тени
+      //    slideShadow: true,
+      //    shadow: true,
+      //    shadowOffset: 20,
+      //    shadowScale: 0.94
+      // },
+
+      // // Эффект потока
+      // effect: 'coverflow',
+      // // Дополнение к coverflow
+      // coverflowEffect: {
+      //    // Угол
+      //    rotate: 20,
+      //    // Наложение
+      //    sctretch: 50,
+      //    // Тень
+      //    slideShadows: true,
+      // },
+
+      // // Брейк поинты (адаптив)
+      // // Ширина экрана
+      // breakpoints: {
+      //    320: {
+      //       slidesPerView: 1,
+      //    },
+      //    480: {
+      //       slidesPerView: 2,
+      //       // direction: 'horizontal',
+      //    },
+      //    992: {
+      //       slidesPerView: 3,
+      //       // direction: 'vertical',
+      //    }
+      // },
+
+      // Миниатюры (превью)
+      observer: true,
+      observeParents: true,
+      observeSlideChildren: true,
+      breakpoints: {
+         320: {
+            loop: false,
+            loopedSlides: 1,
          },
-         // Включение/отключение
-         // перетаскивания на ПК
-         simulateTouch: true,
-         // Чувствительность свайпа
-         touchRatio: 1, // 0 отключит способность перетаскивать на всех устройствах, если хотим чтобы слайды переключались легче то есть меньше применяли усилий то увеличиваем число
-         // Угол срабатывания свайпа/перетаскивания
-         touchAngle: 45,
-         // Курсор перетаскивания
-         grabCursor: true,
-         // pagination: {
-         //    el: '.swiper-pagination',
-         //    // // Буллеты
-         //    clickable: true,
+         481: {
+         },
+         531: {
+
+         },
+         769: {
+            loop: true,
+         },
+         1002: {
+         }
+      },
+      thumbs: {
+         // Свайпер с миниатюрами и его настройки
+         swiper: {
+            el: '.images-mini-slider',
+            // direction: 'vertical', // Для корректной работы нужна высота всего слайдера
+            // freeMode: true,   
+
+            // Бесконечный слайдер
+            // loop: true,
+            // Количество дублирующих слайдов
+            // loopedSlides: 4,
+            // Управление колесом мыши
+            // slideToClickedSlide: true,
+            mousewheel: {
+               // Чувствительность колеса мыши
+               sensitivity: 1,
+               // Класс объекта на котором будет срабатывать прокрутка мышью
+               eventsTarget: ".images-mini-slider" // Если слайдеров много то будут прокручиваться все поэтому в таком случае лучше оставлять по умолчанию отключенным
+            },
+            // Включение/отключение
+            // перетаскивания на ПК
+            simulateTouch: true,
+            // Чувствительность свайпа
+            touchRatio: 1, // 0 отключит способность перетаскивать на всех устройствах, если хотим чтобы слайды переключались легче то есть меньше применяли усилий то увеличиваем число
+            // Угол срабатывания свайпа/перетаскивания
+            touchAngle: 45,
+            // Курсор перетаскивания
+            grabCursor: true,
+            // pagination: {
+            //    el: '.swiper-pagination',
+            //    // // Буллеты
+            //    clickable: true,
             // Динамические буллеты
             // dynamicBullets: true,
             // // Кастомные буллеты
             // renderBullet: function (index, className) {
             //    return '<span class="' + className + '">' + (index + 1) + '</span>';
-         // },
-         breakpoints: {
-            320: {
-               observer: true,
-               observeParents: true,
-               observeSlideChildren: true,
-               slidesPerView: 3,
-               // spaceBetween: 60
+            // },
+            breakpoints: {
+               320: {
+                  observer: true,
+                  observeParents: true,
+                  observeSlideChildren: true,
+                  slidesPerView: 3,
+                  // spaceBetween: 60
+               },
+               481: {
+               },
+               531: {
+                  slidesPerView: 5,
+                  spaceBetween: 30
+               },
+               769: {
+                  slidesPerView: 4,
+                  spaceBetween: 25
+               },
+               1002: {
+                  slidesPerView: 5,
+                  spaceBetween: 50
+               }
             },
-            481: {
-            },
-            531: {
-               slidesPerView: 5,
-               spaceBetween: 30
-            },
-            769: {
-               slidesPerView: 4,
-               spaceBetween: 25
-            },
-            1002: {
-               slidesPerView: 5,
-               spaceBetween: 50
-            }
          },
+      }
+   });
+}
+if (document.querySelector('.top-slider')) {
+   new Swiper('.top-slider', {
+      simulateTouch: false,
+      touchRatio: 0,
+      loop: true,
+      // freeMode: true,
+      spaceBetween: 130,
+      autoplay: {
+         delay: 0,
+         // stopOnLastSlide: true,
+         // disabledOnInteraction: true,
       },
+      speed: 1500,
+      breakpoints: {
+         320: {
+            slidesPerView: 1.6,
+            loopedSlides: 1.6,
+            observer: true,
+            observeParents: true,
+            observeSlideChildren: true,
+         },
+         482: {
+            slidesPerView: 2.6,
+            loopedSlides: 2.6,
+         },
+         1002: {
+            slidesPerView: 3.6,
+            loopedSlides: 3.6,
+         }
+      },
+   });
+}
+if (document.querySelector('.recommendation-slider')) {
+   new Swiper('.recommendation-slider', {
+      navigation: {
+         nextEl: '.swiper-button-next',
+         prevEl: '.swiper-button-prev'
+      },
+      grabCursor: true,
+      mousewheel: {
+         sensitivity: 1,
+         eventsTarget: ".recommendation-slider"
+      },
+      breakpoints: {
+         320: {
+            slidesPerView: 1,
+         },
+         481: {
+            slidesPerView: 2,
+         },
+         769: {
+            slidesPerView: 3,
+         },
+         1001: {
+            slidesPerView: 4,
+         }
+      },
+      observer: true,
+      observeParents: true,
+      observeSlideChildren: true,
+   });
+}
+if (document.querySelector('.new-slider')) {
+   new Swiper('.new-slider', {
+      navigation: {
+         nextEl: '.swiper-button-next',
+         prevEl: '.swiper-button-prev'
+      },
+      grabCursor: true,
+      mousewheel: {
+         sensitivity: 1,
+         eventsTarget: ".new-slider"
+      },
+      breakpoints: {
+         320: {
+            slidesPerView: 1
+         },
+         481: {
+            slidesPerView: 2
+         },
+         769: {
+            slidesPerView: 3
+         },
+         1001: {
+            slidesPerView: 4
+         }
+      },
+      observer: true,
+      observeParents: true,
+      observeSlideChildren: true
+   });
+}
+// window.onload = function () {
+//    document.addEventListener("click", documentActions);
+//    // Actions (Делегирование события click)
+//    function documentActions(e) {
+//       const targetElement = e.target;
+
+//       if (targetElement.classList.contains('actions-product__button')) {
+//          const productId = targetElement.closest('.item-product').dataset.pid;
+//          addToCart(targetElement, productId);
+//          console.log(targetElement);
+//          e.preventDefault();
+//       }
+//       if (targetElement.classList.contains('cart-header__icon') || targetElement.closest('.cart-header__icon')) {
+//          if (document.querySelector('.cart-list').children.length > 0) {
+//             document.querySelector('.cart-header').classList.toggle('_active');
+//          }
+//          e.preventDefault();
+//       } else if (!targetElement.closest('.cart-header') && !targetElement.classList.contains('actions-product__button')) {
+//          document.querySelector('.cart-header').classList.remove('_active');
+//       }
+
+//       if (targetElement.classList.contains('cart-list__delete')) {
+//          const productId = targetElement.closest('.cart-list__item').dataset.cartPid;
+//          updateCart(targetElement, productId, false);
+//          e.preventDefault();
+//       }
+//    }
+
+//    function addToCart(productButton, productId) {
+//       if (!productButton.classList.contains('_hold')) {
+//          productButton.classList.add('_hold');
+//          productButton.classList.add('_fly');
+
+//          const cart = document.querySelector('.cart-header__icon');
+//          const product = document.querySelector(`[data-pid="${productId}"]`);
+//          const productImage = product.querySelector('.item-product__image');
+
+//          const productImageFly = productImage.cloneNode(true);
+
+//          const productImageFlyWidth = productImage.offsetWidth;
+//          const productImageFlyHeight = productImage.offsetHeight;
+//          const productImageFlyTop = productImage.getBoundingClientRect().top;
+//          const productImageFlyLeft = productImage.getBoundingClientRect().left;
+
+//          productImageFly.setAttribute('class', '_flyImage -ibg');
+//          productImageFly.style.cssText =
+//             `
+//             left: ${productImageFlyLeft}px;
+//             top: ${productImageFlyTop}px;
+//             width: ${productImageFlyWidth}px;
+//             height: ${productImageFlyHeight}px;
+//          `;
+
+//          document.body.append(productImageFly);
+
+//          const cartFlyLeft = cart.getBoundingClientRect().left;
+//          const cartFlyTop = cart.getBoundingClientRect().top;
+
+//          productImageFly.style.cssText = 
+//          `
+//          left: ${cartFlyLeft}px;
+//          top: ${cartFlyTop}px;
+//          width: 0px;
+//          height: 0px;
+//          opacity: 0;
+//          `;
+
+//          productImageFly.addEventListener('transitionend', function () {
+//             if (productButton.classList.contains('_fly')) {
+//                productImageFly.remove();
+//                updateCart(productButton, productId);
+//                productButton.classList.remove('_fly');
+//             }
+//          });
+//       }
+//    }
+
+//    function updateCart(productButton, productId, productAdd = true) {
+//       const cart = document.querySelector('.cart-header');
+//       const cartIcon = cart.querySelector('.cart-header__icon');
+//       const cartQuantity = cartIcon.querySelector('span');
+//       const cartProduct = document.querySelector(`[data-cart-pid="${productId}"]`);
+//       const cartList = document.querySelector('.cart-list');
+
+
+//       // Добавляем
+//       if (productAdd) {
+//          if (cartQuantity) {
+//             cartQuantity.innerHTML = ++cartQuantity.innerHTML;
+//          } else {
+//             cartIcon.insertAdjacentHTML('beforeend', `<span>1</span>`);
+//          }
+//          if (!cartProduct) {
+//             const product = document.querySelector(`[data-pid="${productId}"]`);
+//             const cartProductImage = product.querySelector('.item-product__image').innerHTML;
+//             const cartProductTitle = product.querySelector('.item-product__title').innerHTML;
+//             const cartProductContent = `
+//             <a class="cart-list__image -ibg" href="">${cartProductImage}</a>
+// 				<div class="cart-list__body">
+// 					<a class="cart-list__title" href="">${cartProductTitle}</a>
+// 					<div class="cart-list__quantity">Quantity: <span>1</span></div>
+// 					<a class="cart-list__delete" href="">Delete</a>
+// 				</div>
+//             `;
+//             cartList.insertAdjacentHTML('beforeend', `<li data-cart-pid="${productId}" class="cart-list__item">${cartProductContent}</li>`);
+//          } else {
+//             const cartProductQuantity = document.querySelector('.cart-list__quantity span');
+//             cartProductQuantity.innerHTML = ++cartProductQuantity.innerHTML;
+//          }
+
+//          // После всех действий
+//          productButton.classList.remove('_hold');
+//       } else {
+//          const cartProductQuantity = cartProduct.querySelector('.cart-list__quantity  span');
+//          cartProductQuantity.innerHTML = -- cartProductQuantity.innerHTML;
+//          if (!parseInt(cartProductQuantity.innerHTML)) {
+//             cartProduct.remove();
+//          }
+
+//          const cartQuantityValue = --cartQuantity.innerHTML;
+
+//          if (cartQuantityValue) {
+//             cartQuantity.innerHTML = cartQuantityValue;
+//          } else {
+//             cartQuantity.remove();
+//             cart.classList.remove('_active');
+//          }
+//       }
+//    }
+
+// }
+
+// Div внутри корзины в который мы добавляем товары
+
+const shopBagItems = document.querySelector('.shop-bag__items');
+
+window.addEventListener('click', function (event) {
+   // Проверяем что клик был совершен по кнопке "Добавить в корзину"
+   if (event.target.classList.contains('card__shop')) {
+      // Находим карточку с товаром, внутри которой был совершен клик
+      event.target.classList.add('_active');
+      const card = event.target.closest('.new__card');
+      const shoppingBag = document.querySelector('.shopping-bag');
+      const cartQuantity = shoppingBag.querySelector('span');
+      const cartQuantityPhone = menuBag.querySelector('span');
+      // Собираем данные этого товара и записываем их в единый объект productInfo
+      const productInfo = {
+         pid: card.dataset.pid,
+         imgSrc: card.querySelector('.card__img').getAttribute('src'),
+         title: card.querySelector('.card__text').innerText,
+         price: card.querySelector('.card__price').innerText
+      };
+
+      if (cartQuantity) {
+         cartQuantity.innerHTML = ++cartQuantity.innerHTML;
+      } else {
+         shoppingBag.insertAdjacentHTML('beforeend', `<span>1</span>`);
+      }
+      if (cartQuantityPhone) {
+         cartQuantityPhone.innerHTML = ++cartQuantityPhone.innerHTML;
+      } else {
+         menuBag.insertAdjacentHTML('beforeend', `<span>1</span>`);
+      }
+
+      // Собранные данные подставим в шаблон для товара в корзине
+      const cardItemHTML =
+         `
+      <div data-pid="${productInfo.pid}" class="shop-bag__item item-shop-bag">
+         <div class="item-shop-bag__image">
+            <img class="item-shop-bag__img" src="${productInfo.imgSrc}" alt="Картинка">
+         </div>
+         <div class="item-shop-bag__content">
+            <div class="item-shop-bag__title-block">
+               <p class="item-shop-bag__title">${productInfo.title}</p>
+               <div class="item-shop-bag__delete"></div>
+            </div>
+            <div class="item-shop-bag__size">S — M</div>
+            <div class="item-shop-bag__quantity">Количество товара: <span>1</span></div>
+            <div class="item-shop-bag__price">${productInfo.price}</div>
+         </div>
+      </div>
+      `;
+      // Отобразим товар в корзине
+      shopBagItems.insertAdjacentHTML('beforeend', cardItemHTML);
+      // const cartProductQuantity = document.querySelector('.item-shop-bag__quantity span');
+      // cartProductQuantity.innerHTML = ++cartProductQuantity.innerHTML;
+
+      if (shopBagItems.closest('._hidden')) {
+         shopBagItems.closest('.shop-bag__container').classList.remove('_hidden')
+      }
+
    }
-});
 
-// const topWrapper = document.querySelector('.top-wrapper')
-let topSlider = new Swiper('.top-slider', {
-   simulateTouch: false,
-   touchRatio: 0,
-   loop: true,
-   // freeMode: true,
-   spaceBetween: 130,
-   autoplay: {
-      delay: 0,
-      // stopOnLastSlide: true,
-      // disabledOnInteraction: true,
-   },
-   speed: 1500,
-   breakpoints: {
-      320: {
-         slidesPerView: 1.6,
-         loopedSlides: 1.6,
-         observer: true,
-         observeParents: true,
-         observeSlideChildren: true,
-         },
-      482: {
-         slidesPerView: 2.6,
-         loopedSlides: 2.6,
-      },
-      1002: {
-         slidesPerView: 3.6,
-         loopedSlides: 3.6,
-      }
-   },
-});
-
-// const recommendation = document.querySelector('.recommendation')
-let recommendationSlider = new Swiper('.recommendation-slider', {
-   navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-   },
-   grabCursor: true,
-   mousewheel: {
-      sensitivity: 1,
-      eventsTarget: ".recommendation-slider"
-   },
-   breakpoints: {
-      320: {
-         slidesPerView: 1,
-      },
-      481: {
-         slidesPerView: 2,
-      },
-      769: {
-         slidesPerView: 3,
-      },
-      1001: {
-         slidesPerView: 4,
-      }
-   },
-   observer: true,
-   observeParents: true,
-   observeSlideChildren: true,
-});
-
-let newSlider = new Swiper('.new-slider', {
-   navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-   },
-   grabCursor: true,
-   mousewheel: {
-      sensitivity: 1,
-      eventsTarget: ".new-slider"
-   },
-   breakpoints: {
-      320: {
-         slidesPerView: 1
-      },
-      481: {
-         slidesPerView: 2
-      },
-      769: {
-         slidesPerView: 3
-      },
-      1001: {
-         slidesPerView: 4
-      }
-   },
-   observer: true,
-   observeParents: true,
-   observeSlideChildren: true
 });

@@ -98,32 +98,6 @@
                <div class="shop-bag__container _hidden">
                   <div class="shop-bag__title">Корзина</div>
                   <div class="shop-bag__items">
-                     <div class="shop-bag__item item-shop-bag">
-                        <div class="item-shop-bag__image">
-                           <img class="item-shop-bag__img" src="../img/shop-bag-img-1.jpg" alt="Картинка">
-                        </div>
-                        <div class="item-shop-bag__content">
-                           <div class="item-shop-bag__title-block">
-                              <p class="item-shop-bag__title">Бомбер Gone Crazy хаки</p>
-                              <div class="item-shop-bag__delete"></div>
-                           </div>
-                           <div class="item-shop-bag__size">S — M</div>
-                           <div class="item-shop-bag__price">2 499 ₴</div>
-                        </div>
-                     </div>
-                     <div class="shop-bag__item item-shop-bag">
-                        <div class="item-shop-bag__image">
-                           <img class="item-shop-bag__img" src="../img/shop-bag-img-2.jpg" alt="Картинка">
-                        </div>
-                        <div class="item-shop-bag__content">
-                           <div class="item-shop-bag__title-block">
-                              <p class="item-shop-bag__title">Бомбер Gone Crazy хаки</p>
-                              <div class="item-shop-bag__delete"></div>
-                           </div>
-                           <div class="item-shop-bag__size">S — M</div>
-                           <div class="item-shop-bag__price">2 499 ₴</div>
-                        </div>
-                     </div>
                   </div>
                   <div class="shop-bag__order-sum">
                      <div class="shop-bag__subtitle">Сумма заказа: . . . . . . </div>
@@ -403,7 +377,7 @@
          <div class="menu__text">Написать</div>
       </a>
       <div class="menu__bag">
-         <span class="icon-bag"></span>
+         <div class="icon-bag"></div>
          <div class="menu__text">Корзина</div>
       </div>
       <a class="menu__wishlist" href="wish.html">
@@ -428,31 +402,46 @@
                   <div class="images-slider__wrapper swiper-wrapper">
                      <div class="images-slider__slide swiper-slide">
                         <div class="images-slider__image">
-                           <div class="card__icon"></div>
-                           <img class="images-slider__img" src="../img/page-image-big-1.jpg" alt="Картинка">
+                           <div class="card__actions">
+                              <div class="card__icon"></div>
+                              <div class="card__shop"></div>
+                           </div>
+                           <img class="images-slider__img images-slider__img_1" src="../img/page-image-big-1.jpg" alt="Картинка">
                         </div>
                      </div>
                      <div class="images-slider__slide swiper-slide">
                         <div class="images-slider__image">
-                           <div class="card__icon"></div>
+                           <div class="card__actions">
+                              <div class="card__icon"></div>
+                              <div class="card__shop"></div>
+                           </div>
                            <img class="images-slider__img" src="../img/page-image-big-2.jpg" alt="Картинка">
                         </div>
                      </div>
                      <div class="images-slider__slide swiper-slide">
                         <div class="images-slider__image">
-                           <div class="card__icon"></div>
+                           <div class="card__actions">
+                              <div class="card__icon"></div>
+                              <div class="card__shop"></div>
+                           </div>
                            <img class="images-slider__img" src="../img/page-image-big-3.jpg" alt="Картинка">
                         </div>
                      </div>
                      <div class="images-slider__slide swiper-slide">
                         <div class="images-slider__image">
-                           <div class="card__icon"></div>
+                           <div class="card__actions">
+                              <div class="card__icon"></div>
+                              <div class="card__shop"></div>
+                           </div>
                            <img class="images-slider__img" src="../img/page-image-big-4.jpg" alt="Картинка">
                         </div>
                      </div>
                      <div class="images-slider__slide swiper-slide">
                         <div class="images-slider__image">
-                           <div class="card__icon"></div>
+                           <div class="card__actions">
+                              <div class="card__icon"></div>
+                              <div class="card__shop"></div>
+                           </div>
                            <img class="images-slider__img" src="../img/page-image-big-2.jpg" alt="Картинка">
                         </div>
                      </div>
@@ -489,7 +478,7 @@
                   </div>
                   <!-- <div class="images-mini-slider-pagination swiper-pagination"></div> -->
                </div>
-               
+
             </div>
             <div class="page__content content-page">
                <div class="content-page__title">Бомбер Gone Crazy хаки</div>
@@ -525,7 +514,7 @@
                   </ul>
                </div>
                <div class="content-page__buttons">
-                  <div class="content-page__button button">
+                  <div class="content-page__button content-page__button_shop button">
                      <button class="btn" type="submit">
                         <div class="content-page__button-text button__text">в корзину</div>
                         <svg width="224" height="59" viewBox="0 0 224 59" fill="none"
@@ -543,7 +532,7 @@
                      <a class="btn" href="checkout.html">
                         <div class="content-page__button-text button__text content-page__button-text_color">Быстрый
                            заказ</div>
-                        <svg  width="222" height="57" viewBox="0 0 222 57" fill="none"
+                        <svg width="222" height="57" viewBox="0 0 222 57" fill="none"
                            xmlns="http://www.w3.org/2000/svg">
                            <path
                               d="M6.71469 39.615L3.05371 34.2331L1.0318 12.7056C2.79991 9.64093 8.97222 3.33217 19.5166 2.61458C32.6972 1.7176 38.7941 0.810288 53.9411 1.03453C69.0881 1.25878 161.929 1.48496 167.259 1.48496C172.588 1.48496 198.986 0.812408 206.008 4.1759C211.625 6.86669 216.781 12.0244 218.657 14.2669C218.097 14.7154 217.316 16.1056 218.667 18.079C220.019 20.0523 220.738 23.0871 220.928 24.3578C220.182 25.1053 218.691 26.7797 218.693 27.4972C218.695 28.3942 213.647 28.6185 216.175 29.7397C218.197 30.6367 218.709 33.2529 218.712 34.4488C216.751 35.5701 211.933 37.8574 208.344 38.0368C204.754 38.2162 201.614 39.0085 200.493 39.3822L200.498 41.1763C202.182 41.4753 205.213 42.1629 203.868 42.5216C202.186 42.9701 200.5 41.8489 199.1 42.5216C197.699 43.1944 195.739 44.5399 197.423 44.9884C197.941 45.4016 198.448 45.6077 198.902 45.6879C199.458 45.5805 200.06 45.4922 200.51 45.4368C200.222 45.621 199.63 45.8166 198.902 45.6879C197.957 45.8703 197.144 46.108 197.427 46.3338C197.877 46.6926 199.673 47.2308 200.515 47.455L201.922 48.8005H197.434C194.965 48.8005 195.474 50.146 196.037 50.8187C195.383 50.9682 193.682 51.1775 192.11 50.8187C190.145 50.3702 190.989 51.043 187.623 51.2672C184.931 51.4466 170.293 51.342 165.711 51.2672C166.084 50.9682 166.326 50.3702 164.306 50.3702C161.782 50.3702 161.501 50.3702 158.417 50.8187C155.333 51.2672 56.88 50.3683 47.3434 50.3683C39.7141 50.3683 49.4094 49.2574 48.0069 49.2574C43.6146 50.0049 28.4006 51.455 21.8928 51.2756C13.758 51.0513 6.73967 48.8089 6.73906 48.5847C6.73857 48.4053 5.23926 47.1644 4.48967 46.5664C5.23865 46.9402 6.73601 47.4634 6.73357 46.5664C6.73114 45.6695 5.22809 43.0533 4.47687 41.8573L6.71469 39.615Z"
@@ -788,7 +777,10 @@
             <div class="recommendation-slider__wrapper swiper-wrapper">
                <div class="recommendation-slider__slide swiper-slide">
                   <li class="new__card">
-                     <div class="card__icon"></div>
+                     <div class="card__actions">
+                        <div class="card__icon"></div>
+                        <div class="card__shop"></div>
+                     </div>
                      <a class="card__link" href="bomber-jacket_gone-crazy.html">
                         <div class="card__image">
                            <img class="card__img" src="../img/card-1.jpg" alt="Картинка">
@@ -803,7 +795,10 @@
                </div>
                <div class="recommendation-slider__slide swiper-slide">
                   <li class="new__card">
-                     <div class="card__icon"></div>
+                     <div class="card__actions">
+                        <div class="card__icon"></div>
+                        <div class="card__shop"></div>
+                     </div>
                      <a class="card__link" href="bomber-jacket_gone-crazy.html">
                         <div class="card__image">
                            <img class="card__img" src="../img/card-1.jpg" alt="Картинка">
@@ -818,7 +813,10 @@
                </div>
                <div class="recommendation-slider__slide swiper-slide">
                   <li class="new__card">
-                     <div class="card__icon"></div>
+                     <div class="card__actions">
+                        <div class="card__icon"></div>
+                        <div class="card__shop"></div>
+                     </div>
                      <a class="card__link" href="bomber-jacket_gone-crazy.html">
                         <div class="card__image">
                            <img class="card__img" src="../img/card-1.jpg" alt="Картинка">
@@ -833,7 +831,10 @@
                </div>
                <div class="recommendation-slider__slide swiper-slide">
                   <li class="new__card">
-                     <div class="card__icon"></div>
+                     <div class="card__actions">
+                        <div class="card__icon"></div>
+                        <div class="card__shop"></div>
+                     </div>
                      <a class="card__link" href="bomber-jacket_gone-crazy.html">
                         <div class="card__image">
                            <img class="card__img" src="../img/card-1.jpg" alt="Картинка">
@@ -848,7 +849,10 @@
                </div>
                <div class="recommendation-slider__slide swiper-slide">
                   <li class="new__card">
-                     <div class="card__icon"></div>
+                     <div class="card__actions">
+                        <div class="card__icon"></div>
+                        <div class="card__shop"></div>
+                     </div>
                      <a class="card__link" href="bomber-jacket_gone-crazy.html">
                         <div class="card__image">
                            <img class="card__img" src="../img/card-1.jpg" alt="Картинка">
@@ -863,7 +867,10 @@
                </div>
                <div class="recommendation-slider__slide swiper-slide">
                   <li class="new__card">
-                     <div class="card__icon"></div>
+                     <div class="card__actions">
+                        <div class="card__icon"></div>
+                        <div class="card__shop"></div>
+                     </div>
                      <a class="card__link" href="bomber-jacket_gone-crazy.html">
                         <div class="card__image">
                            <img class="card__img" src="../img/card-1.jpg" alt="Картинка">
@@ -878,7 +885,10 @@
                </div>
                <div class="recommendation-slider__slide swiper-slide">
                   <li class="new__card">
-                     <div class="card__icon"></div>
+                     <div class="card__actions">
+                        <div class="card__icon"></div>
+                        <div class="card__shop"></div>
+                     </div>
                      <a class="card__link" href="bomber-jacket_gone-crazy.html">
                         <div class="card__image">
                            <img class="card__img" src="../img/card-1.jpg" alt="Картинка">
@@ -893,7 +903,10 @@
                </div>
                <div class="recommendation-slider__slide swiper-slide">
                   <li class="new__card">
-                     <div class="card__icon"></div>
+                     <div class="card__actions">
+                        <div class="card__icon"></div>
+                        <div class="card__shop"></div>
+                     </div>
                      <a class="card__link" href="bomber-jacket_gone-crazy.html">
                         <div class="card__image">
                            <img class="card__img" src="../img/card-1.jpg" alt="Картинка">
