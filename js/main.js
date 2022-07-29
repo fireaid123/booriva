@@ -87,6 +87,8 @@ const itemCatalogSubtitles = document.querySelectorAll('.item-catalog__subtitle'
 const productsContainer = document.querySelector('.products__container');
 const titleBlockSubtitleIcon = document.querySelector('.title-block__subtitle-icon');
 const cardShops = document.querySelectorAll('.card__shop');
+const shoppingBag = document.querySelector('.shopping-bag');
+const shopBagContainer = document.querySelector('.shop-bag__container');
 
 if (window.matchMedia("(max-width: 769px)").matches) {
    if (linkMenus.length > 0) {
@@ -130,7 +132,7 @@ if (menuLogo) {
       menuClose.classList.remove('_active');
       menuHeader.classList.remove('_lock');
       iconMenu.classList.remove('_lock');
-      shopBag.parentElement.classList.remove('_active');
+      shoppingBag.parentElement.classList.remove('_active');
       headerShopBag.classList.remove('_active');
       shopBagClose.classList.remove('_active');
       menuBag.classList.remove('_active');
@@ -201,9 +203,9 @@ if (tablePageCloseIcon) {
       document.body.classList.remove('_lock');
    });
 }
-if (shopBag) {
-   shopBag.addEventListener("click", function (e) {
-      shopBag.parentElement.classList.toggle('_active');
+if (shoppingBag) {
+   shoppingBag.addEventListener("click", function (e) {
+      shoppingBag.classList.toggle('_active');
       headerShopBag.classList.toggle('_active');
       iconMenu.classList.toggle('_lock');
       document.body.classList.toggle('_lock');
@@ -291,6 +293,7 @@ if (shopBagClose) {
       shopBagClose.classList.remove('_active');
       headerShopBag.classList.remove('_active');
       menuBag.classList.remove('_active');
+      shoppingBag.classList.remove('_active');
       menuClose.classList.remove('_active');
       iconMenu.classList.remove('_lock');
       menuHeader.classList.remove('_lock');
@@ -333,19 +336,19 @@ if (cardIcons.length > 0) {
       });
    }
 }
-if (cardShops.length > 0) {
-   // Далее если мы прошли проверку и такие стрелочки у нас есть, мы запускаем цикл чтобы по всем им пробежаться
-   // создаем константу с каждой из этих стрелочек в данной ситуации одна
-   for (let index = 0; index < cardShops.length; index++) {
-      // const cardIcona = cardIcons[index];
-      const cardShop = cardShops[index];
-      // Далее мы с на каждую из них будем навешивать событие клик
-      cardShop.addEventListener("click", function (e) {
-         // Что нам нужно сделать при клике на стрелочку? Самый простой вариант это просто навешать какой то класс непосредственно родителю нажатой стрелочки.
-         e.target.classList.toggle('_active');
-      });
-   }
-}
+// if (cardShops.length > 0) {
+//    // Далее если мы прошли проверку и такие стрелочки у нас есть, мы запускаем цикл чтобы по всем им пробежаться
+//    // создаем константу с каждой из этих стрелочек в данной ситуации одна
+//    for (let index = 0; index < cardShops.length; index++) {
+//      // const cardIcona = cardIcons[index];
+//       const cardShop = cardShops[index];
+//       // Далее мы с на каждую из них будем навешивать событие клик
+//       cardShop.addEventListener("click", function (e) {
+//          // Что нам нужно сделать при клике на стрелочку? Самый простой вариант это просто навешать какой то класс непосредственно родителю нажатой стрелочки.
+//          e.target.classList.toggle('_active');
+//       });
+//    }
+// }
 if (itemTopShops.length > 0) {
    // Далее если мы прошли проверку и такие стрелочки у нас есть, мы запускаем цикл чтобы по всем им пробежаться
    // создаем константу с каждой из этих стрелочек в данной ситуации одна
@@ -895,62 +898,153 @@ if (document.querySelector('.new-slider')) {
 // Div внутри корзины в который мы добавляем товары
 
 const shopBagItems = document.querySelector('.shop-bag__items');
-
 window.addEventListener('click', function (event) {
-   // Проверяем что клик был совершен по кнопке "Добавить в корзину"
-   if (event.target.classList.contains('card__shop')) {
-      // Находим карточку с товаром, внутри которой был совершен клик
-      event.target.classList.add('_active');
-      const card = event.target.closest('.new__card');
-      const shoppingBag = document.querySelector('.shopping-bag');
+   if (shopBagItems) {
       const cartQuantity = shoppingBag.querySelector('span');
       const cartQuantityPhone = menuBag.querySelector('span');
-      // Собираем данные этого товара и записываем их в единый объект productInfo
-      const productInfo = {
-         pid: card.dataset.pid,
-         imgSrc: card.querySelector('.card__img').getAttribute('src'),
-         title: card.querySelector('.card__text').innerText,
-         price: card.querySelector('.card__price').innerText
-      };
-
-      if (cartQuantity) {
+      if (event.target.classList.contains('item-shop-bag__control_minus')) {
+         const btnMinusParent = event.target.closest('.item-shop-bag__counter');
+         const cartProductQuantity = btnMinusParent.children[1].children[0];
+         const btnMinus = btnMinusParent.children[0];
+         if (parseInt(cartProductQuantity.innerHTML) > 1) {
+            cartProductQuantity.innerHTML = --cartProductQuantity.innerHTML;
+            cartQuantity.innerHTML = --cartQuantity.innerHTML;
+            cartQuantityPhone.innerHTML = --cartQuantityPhone.innerHTML;
+            if (parseInt(cartProductQuantity.innerHTML) <= 1) {
+               btnMinus.classList.add('_lock');
+            }
+         }
+         calcCartPrice();
+      }
+      if (event.target.classList.contains('item-shop-bag__control_plus')) {
+         const btnPlusParent = event.target.closest('.item-shop-bag__counter');
+         const cartProductQuantity = btnPlusParent.children[1].children[0];
+         const btnMinus = btnPlusParent.children[0];
+         cartProductQuantity.innerHTML = ++cartProductQuantity.innerHTML;
          cartQuantity.innerHTML = ++cartQuantity.innerHTML;
-      } else {
-         shoppingBag.insertAdjacentHTML('beforeend', `<span>1</span>`);
-      }
-      if (cartQuantityPhone) {
          cartQuantityPhone.innerHTML = ++cartQuantityPhone.innerHTML;
+         calcCartPrice();
+         if (btnMinus.classList.contains('_lock')) {
+            btnMinus.classList.remove('_lock');
+         }
+      }
+      if (event.target.classList.contains('card__shop')) {
+         // Находим карточку с товаром, внутри которой был совершен клик
+         const card = event.target.closest('.card');
+         event.target.classList.add('_active');
+         // Собираем данные этого товара и записываем их в единый объект productInfo
+         const productInfo = {
+            pid: card.dataset.pid,
+            imgSrc: card.querySelector('.card__img').getAttribute('src'),
+            title: card.querySelector('.card__text').innerText,
+            price: card.querySelector('.card__price').innerText
+         };
+         if (cartQuantity) {
+            cartQuantity.innerHTML = ++cartQuantity.innerHTML;
+         } else {
+            shoppingBag.insertAdjacentHTML('beforeend', `<span>1</span>`);
+         }
+         if (cartQuantityPhone) {
+            cartQuantityPhone.innerHTML = ++cartQuantityPhone.innerHTML;
+         } else {
+            menuBag.insertAdjacentHTML('beforeend', `<span>1</span>`);
+         }
+         // Проверять есть ли уже такой товар в корзине
+         // const itemInCard = shopBagItems.querySelector(`[data-pid="${productInfo.pid}"]`)
+         // Если товар есть в корзине
+         if (shopBagItems.querySelector(`[data-pid="${productInfo.pid}"]`)) {
+            const cartProductQuantity = shopBagItems.querySelector('.item-shop-bag__quantity span');
+            cartProductQuantity.innerHTML = ++cartProductQuantity.innerHTML;
+         } else {
+            const cardItemHTML =
+               `
+                  <div data-pid="${productInfo.pid}" class="shop-bag__item item-shop-bag">
+                     <div class="item-shop-bag__image">
+                        <img class="item-shop-bag__img" src="${productInfo.imgSrc}" alt="Картинка">
+                     </div>
+                     <div class="item-shop-bag__content">
+                        <div class="item-shop-bag__title-block">
+                           <p class="item-shop-bag__title">${productInfo.title}</p>
+                           <div class="item-shop-bag__delete"></div>
+                        </div>
+                        <div class="item-shop-bag__size">S — M</div>
+                        <div class="item-shop-bag__counter">
+                           <div class="item-shop-bag__control item-shop-bag__control_minus _lock"></div>
+                           <div class="item-shop-bag__quantity"><span>1</span> шт</div>
+                           <div class="item-shop-bag__control item-shop-bag__control_plus"></div>
+                        </div>
+                        <div class="item-shop-bag__price">${productInfo.price}</div>
+                     </div>
+                  </div>
+               `;
+            shopBagItems.insertAdjacentHTML('beforeend', cardItemHTML);
+         }
+
+         // Собранные данные подставим в шаблон для товара в корзине
+         // const cardItemHTML =
+         //    `
+         // <div data-pid="${productInfo.pid}" class="shop-bag__item item-shop-bag">
+         //    <div class="item-shop-bag__image">
+         //       <img class="item-shop-bag__img" src="${productInfo.imgSrc}" alt="Картинка">
+         //    </div>
+         //    <div class="item-shop-bag__content">
+         //       <div class="item-shop-bag__title-block">
+         //          <p class="item-shop-bag__title">${productInfo.title}</p>
+         //          <div class="item-shop-bag__delete"></div>
+         //       </div>
+         //       <div class="item-shop-bag__size">S — M</div>
+         //       <div class="item-shop-bag__quantity">Количество товара: <span>1</span></div>
+         //       <div class="item-shop-bag__price">${productInfo.price}</div>
+         //    </div>
+         // </div>
+         // `;
+         // Отобразим товар в корзине
+         // shopBagItems.insertAdjacentHTML('beforeend', cardItemHTML);
+         // const cartProductQuantity = document.querySelector('.item-shop-bag__quantity span');
+         // cartProductQuantity.innerHTML = ++cartProductQuantity.innerHTML;
+         calcCartPrice();
+         // buttonControls();
+         if (shopBagItems.closest('._hidden')) {
+            shopBagItems.closest('.shop-bag__container').classList.remove('_hidden')
+         }
       } else {
-         menuBag.insertAdjacentHTML('beforeend', `<span>1</span>`);
-      }
-
-      // Собранные данные подставим в шаблон для товара в корзине
-      const cardItemHTML =
-         `
-      <div data-pid="${productInfo.pid}" class="shop-bag__item item-shop-bag">
-         <div class="item-shop-bag__image">
-            <img class="item-shop-bag__img" src="${productInfo.imgSrc}" alt="Картинка">
-         </div>
-         <div class="item-shop-bag__content">
-            <div class="item-shop-bag__title-block">
-               <p class="item-shop-bag__title">${productInfo.title}</p>
-               <div class="item-shop-bag__delete"></div>
-            </div>
-            <div class="item-shop-bag__size">S — M</div>
-            <div class="item-shop-bag__quantity">Количество товара: <span>1</span></div>
-            <div class="item-shop-bag__price">${productInfo.price}</div>
-         </div>
-      </div>
-      `;
-      // Отобразим товар в корзине
-      shopBagItems.insertAdjacentHTML('beforeend', cardItemHTML);
-      // const cartProductQuantity = document.querySelector('.item-shop-bag__quantity span');
-      // cartProductQuantity.innerHTML = ++cartProductQuantity.innerHTML;
-
-      if (shopBagItems.closest('._hidden')) {
-         shopBagItems.closest('.shop-bag__container').classList.remove('_hidden')
-      }
-
+         if (event.target.classList.contains('item-shop-bag__delete')) {
+            // Работает не трогать
+            event.target.closest('.shop-bag__item').remove();
+            const shopBagItem = event.target.closest('.shop-bag__item');
+            const productInfo = {
+               pid: shopBagItem.dataset.pid,
+            };
+            const cardPid = document.querySelector(`[data-pid="${productInfo.pid}"]`);
+            const cardShopButton = cardPid.children[0].children[1];
+            const itemShopQuantity = shopBagItem.children[1].children[2].children[1].children[0];
+            cardShopButton.classList.remove('_active');
+            if ((shopBagItems.children.length < 1)) {
+               cartQuantity.remove();
+               cartQuantityPhone.remove();
+            } else {
+               cartQuantity.innerHTML = parseInt(cartQuantity.innerHTML) - parseInt(itemShopQuantity.innerHTML);
+               cartQuantityPhone.innerHTML = parseInt(cartQuantityPhone.innerHTML) - parseInt(itemShopQuantity.innerHTML);
+            }
+               calcCartPrice();
+            // Работает не трогать)
+            if (!(shopBagItems.children.length > 0)) {
+               shopBagItems.closest('.shop-bag__container').classList.add('_hidden');
+            }
+         };
+      };
    }
-
 });
+
+function calcCartPrice() {
+   const shopBagItem = document.querySelectorAll('.shop-bag__item');
+   const shopBagOrderSum = document.querySelector('.shop-bag__price');
+   let totalPrice = 0
+   shopBagItem.forEach(function (item) {
+      const itemQuantityElement = item.querySelector('.item-shop-bag__quantity span').innerHTML;
+      const itemPrice = item.querySelector('.item-shop-bag__price').innerHTML;
+      const currentPrice = parseInt(itemQuantityElement) * parseInt(itemPrice.replaceAll(/\s/g, ''));
+      totalPrice += currentPrice;
+   })
+   shopBagOrderSum.innerHTML = totalPrice + ' ' + '₴';
+}
